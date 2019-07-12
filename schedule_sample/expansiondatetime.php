@@ -95,12 +95,10 @@ class ExpansionDateTime extends DateTime
       // 当日が祝日の場合はfalse
       if ($this->checkHoliday()) return false;
 
-      $num = ($this->year <= 2006) ? 1 : 7; //改正法なら最大7日間遡る
-
       $d = clone $this;
       $d->modify('-1 day');
       $isTransfer = false;
-      for ($i = 0 ; $i < $num ; $i++) {
+      for ($i = 0 ; $i < 7 ; $i++) {
           if ($d->checkHoliday()) {
             // 祝日かつ日曜ならば振替休日
             if ($d->dayOfWeek == 0) {
@@ -138,7 +136,7 @@ class ExpansionDateTime extends DateTime
      $d1 = new ExpansionDateTime($this->format('Y-m-1'));
 
      $w1 = intval($d1->dayOfWeek);
-     $day  = $w - $w1 < 0 ? 7 + $w - $w1 : $w - $w1;
+     $day  = ($w - $w1 < 0) ? 7 + $w - $w1 : $w - $w1;
      $day++;
      $day = $day + 7 * ($week - 1);
 
