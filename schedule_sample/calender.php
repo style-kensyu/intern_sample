@@ -57,10 +57,6 @@ HTML;
 				}
 			}
 
-			if($today == $date){
-				$color = " bgcolor='#6C9BD2'";
-			}
-
 			// 予定がある場合追加
 			$daytext = "";
 			if(in_array($date,$schedule_array)) $daytext .= '<i class="material-icons md-18">schedule</i>';

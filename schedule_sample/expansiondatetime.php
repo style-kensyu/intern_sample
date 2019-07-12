@@ -182,8 +182,7 @@ class ExpansionDateTime extends DateTime
 
     // 存在しない変数が呼び出されたときに実行される。
     public function __get($name){
-      switch (true) {
-        case array_key_exists($name, $formats = [
+        $formats = [
           'year' => 'Y',
           'month' => 'n',
           'day' => 'j',
@@ -196,8 +195,7 @@ class ExpansionDateTime extends DateTime
           'weekOfYear' => 'W',
           'daysInMonth' => 't',
           'timestamp' => 'U',
-        ]):
+        ];
         return (int) $this->format($formats[$name]);
-      }
     }
 }
