@@ -4,7 +4,7 @@
 
 <form method="POST" action="index.php?date=<?=$date?>">
   <div class="outer">
-	  <div class="head"><h2>カレンダー : <?=$gengo?></h2></div>
+	  <div class="head"><h2 style="background-color: <?=$color?>">カレンダー : <?=$gengo?></h2></div>
 	  <div class="main">
       <div class="main_cont">
         <div class="box_title">スケジュール</div>
@@ -22,13 +22,13 @@
             </div>
 			    </div>
 		    <div>
-          <?= $calender ?>
-          <h4>スケジュール入力</h4>
-			    <input type="text" name="plan" size="50" style="font-size:20px">
-          <input type="text" class="timepicker" value="00:00" name="time" data-time-format="H:i"/>
-          <input type="hidden" name="hidden" value="<?=$hidden?>" >
-  				<input class="submit" type="submit" value="登録">
-		    </div>
+        <?= $calender ?>
+        <h4>スケジュール入力</h4>
+		    <input type="text" name="plan" size="40" style="font-size:20px">
+        <input type="text" class="timepicker" value="00:00" name="time" data-time-format="H:i"/>
+        <input type="hidden" name="hidden" value="<?=$hidden?>" >
+				<input class="submit" type="submit" value="登録">
+	    </div>
 		</div>
 	</div>
 </form>

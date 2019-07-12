@@ -9,4 +9,23 @@ class utile{
       }
       return $r_str;
     }
+
+    function monthColor($month){
+      $colors = [
+        "#c9171e",
+        "#c3d825",
+        "#f5d1db",
+        "#c89933",
+        "#6c2463",
+        "#47885e",
+        "#bbbcde",
+        "#b45e67",
+        "#223a70",
+        "#5654a2",
+        "#eb6101",
+        "#bbe2f1",
+      ];
+
+      return $colors[$month - 1];
+    }
 }

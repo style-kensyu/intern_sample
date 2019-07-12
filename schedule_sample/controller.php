@@ -28,7 +28,6 @@ if(isset($_SESSION['hidden']) && isset($_POST['hidden'])){
     }
 }
 
-
 /** $dateの形式
  * get で来る形式は　2015-11-22　この形
  */
@@ -97,6 +96,9 @@ $calender = $calClass->create_calender($schedule_array,$date);
 // holiday
 $ExpansionDateTime= new ExpansionDateTime($date);
 $holiday = $ExpansionDateTime->holiday();
+
+// image color
+$color = $utileClass->monthColor($month);
 
 }catch(Exception $e){
     echo $e->getMessage();

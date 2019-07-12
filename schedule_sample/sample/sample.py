@@ -1,5 +1,4 @@
-# coding: utf-8
-# Your code here!
+# python3
 def if_test(num):
     if num > 100:
         print('100 < num')

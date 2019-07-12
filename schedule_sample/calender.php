@@ -28,11 +28,16 @@ class calender{
 		// 初めの空白部分
 		$firsttable = "";
 		for($i=0;$i<$firstWeek;$i++){
-			$firsttable .= $this->disabled_table();
+			$td = <<<HTML
+			<td class='day--disabled'>
+			</td>\n
+HTML;
+			$firsttable .= $td;
 		}
 
 		// カレンダー部分
 		$calender = "";
+		$today = date("Y-m-d");
 		for($j=1;$j<=$lastDay;$j++){
 			$date = $year .'-'. $month .'-'. sprintf("%02d",$j);
 			$ExpansionDateTime = new ExpansionDateTime($date);
@@ -42,7 +47,7 @@ class calender{
 
 			if($j == $day){
 				//選択した日付
-				$color = " class='today'";
+				$color = " class='selectday'";
 			}else{
 				// 休日であるかどうか
 				if($holiday){
@@ -51,6 +56,11 @@ class calender{
 					$color = $this->week_color($weekday);
 				}
 			}
+
+			if($today == $date){
+				$color = " bgcolor='#6C9BD2'";
+			}
+
 			// 予定がある場合追加
 			$daytext = "";
 			if(in_array($date,$schedule_array)) $daytext .= '<i class="material-icons md-18">schedule</i>';
@@ -68,7 +78,11 @@ class calender{
 		// 最後の空白部分
 		$lasttable = "";
 		for($k=0;$k<(6-$lastWeek);$k++){
-			$lasttable .= $this->disabled_table();
+			$td = <<<HTML
+			<td class='day--disabled'>
+			</td>\n
+HTML;
+			$lasttable .= $td;
 		}
 
 		$html = <<<HTML
@@ -125,13 +139,7 @@ HTML;
 		return $result;
 	}
 
-	private function disabled_table(){
-		$td = <<<HTML
-		<td class='day--disabled'>
-		</td>\n
-HTML;
-		return $td;
-	}
+
 
 	private function nomal_table($color,$date,$i){
 		$td = <<<HTML

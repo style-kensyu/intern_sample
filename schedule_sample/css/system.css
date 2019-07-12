@@ -59,7 +59,7 @@ td{
   height:50px;
   width:70px;
 }
-td.today{
+td.selectday{
   font-size:20px;
   font-weight:bold;
   background-color:#7fff7f;
@@ -140,7 +140,7 @@ td:hover{
 }
 
 button.button1 {
-  font-size: 0.7em;
+  font-size: 0.9em;
   font-weight: bold;
   padding: 5px 13px;
   background-color: #F08080;
@@ -156,7 +156,7 @@ button.button1:hover {
 }
 
 button.button2 {
-  font-size: 0.7em;
+  font-size: 0.9em;
   font-weight: bold;
   padding: 5px 13px;
   background-color: #1e90ff;
@@ -172,7 +172,7 @@ button.button2:hover {
 }
 
 input.submit {
-  font-size: 0.7em;
+  font-size: 0.9em;
   font-weight: bold;
   padding: 5px 13px;
   background-color: #3cb371;
@@ -261,7 +261,7 @@ textarea{
 h2 {
   position: relative;
   padding: 0.1em;
-  background: #191970;
+  /* background: #191970; */
   color: white;
   width: 300px;
 }
