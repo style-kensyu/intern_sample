@@ -9,13 +9,13 @@ class calender{
 		$day  = $selectDateTime->format('d');
 
 		//月初め
-    $firstDate = new ExpansionDateTime('first day of '.$datetime);
+    	$firstDate = new ExpansionDateTime('first day of '.$datetime);
 		$firstWeek = $firstDate->format('w');
 		//月終わり
-    $lastDate  = new ExpansionDateTime('last day of '.$datetime);
+    	$lastDate  = new ExpansionDateTime('last day of '.$datetime);
 		$lastWeek  = $lastDate->format('w');
 		$lastDay 	 = $lastDate->format('d');
-		// 次月、前月の始め
+		// 先月、来月の始め
 		$return_date = new ExpansionDateTime('last day of '.$datetime.' last month');
 		$advance_date= new ExpansionDateTime('first day of '.$datetime.' next month');
 		$rd = $return_date->format('Y-m-d');
@@ -29,9 +29,9 @@ class calender{
 		$firsttable = "";
 		for($i=0;$i<$firstWeek;$i++){
 			$td = <<<HTML
-			<td class='day--disabled'>
-			</td>\n
-HTML;
+				<td class='day--disabled'>
+				</td>\n
+			HTML;
 			$firsttable .= $td;
 		}
 
@@ -41,7 +41,7 @@ HTML;
 		for($j=1;$j<=$lastDay;$j++){
 			$date = $year .'-'. $month .'-'. sprintf("%02d",$j);
 			$ExpansionDateTime = new ExpansionDateTime($date);
-      $holiday = $ExpansionDateTime->holiday();
+      		$holiday = $ExpansionDateTime->holiday();
 			$weekday = $ExpansionDateTime->format('D');
 			// print($j .' : '. $weekday .' : '. $weeknumber . '<br>');
 
@@ -75,23 +75,23 @@ HTML;
 		$lasttable = "";
 		for($k=0;$k<(6-$lastWeek);$k++){
 			$td = <<<HTML
-			<td class='day--disabled'>
-			</td>\n
-HTML;
+				<td class='day--disabled'>
+				</td>\n
+			HTML;
 			$lasttable .= $td;
 		}
 
 		$html = <<<HTML
-		<table>
-			{$calender_header}
-			{$weekday_header}
-			<tr>
-				{$firsttable}
-				{$calender}
-				{$lasttable}
-			</tr>
-		</table>\n
-HTML;
+			<table>
+				{$calender_header}
+				{$weekday_header}
+				<tr>
+					{$firsttable}
+					{$calender}
+					{$lasttable}
+				</tr>
+			</table>\n
+		HTML;
 		return $html;
 	}
 
@@ -104,7 +104,7 @@ HTML;
 				<th colspan="5">{$year}/{$month}/{$day}</th>
 				<th><a href="?date={$ad}" ><i class="material-icons">chevron_right</i></a></th>
 			</tr>
-HTML;
+		HTML;
 		return $calender_header;
 	}
 
@@ -139,12 +139,12 @@ HTML;
 
 	private function nomal_table($color,$date,$i){
 		$td = <<<HTML
-		<td{$color}>
-			<a href="?date={$date}">
-				{$i}
-			</a>
-		</td>\n
-HTML;
+			<td{$color}>
+				<a href="?date={$date}">
+					{$i}
+				</a>
+			</td>\n
+		HTML;
 		return $td;
 	}
 
