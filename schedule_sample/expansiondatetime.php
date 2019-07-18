@@ -148,10 +148,7 @@ class ExpansionDateTime extends DateTime
    private function premiumHoliday($month, $weekday, $start, $end, $name){
      $now = clone $this;
      $nowdate = $now->format('Y-m-d');
-     $lastweekday = new ExpansionDateTime('last '.self::$weekdaylist[$weekday].' of '.$nowdate);
- 		 $lastweekday = $lastweekday->format('Y-m-d');
-     logger($lastweekday);
-
+     
    }
 
     /**
