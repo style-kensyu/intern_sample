@@ -1,8 +1,6 @@
 <?php
 
 class db{
-	protected $db;
-
     // __construct
     public function __construct()
     {
@@ -73,15 +71,6 @@ SQL;
 				return true;
           // exit;
       }
-    }
-
-		/**
-		 * sqlを起動する
-		 * @param $sql
-		 */
-    public function query($sql){
-    	$result = $this->db->query($sql);
-    	return $result->fetchAll();
     }
 }
 

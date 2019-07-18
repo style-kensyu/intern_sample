@@ -2,48 +2,71 @@
 
 class calender{
 
+	const wd = array("日","月","火","水","木","金","土");
+
 	public function create_calender($schedule_array,$datetime){
 		$selectDateTime = new ExpansionDateTime($datetime);
+
 		$year = $selectDateTime->format('Y');
 		$month= $selectDateTime->format('m');
 		$day  = $selectDateTime->format('d');
+		logger("calender::create_calender [year] : ".$year." [month] :".$month." [day] :".$day);
 
 		//月初め
-    	$firstDate = new ExpansionDateTime('first day of '.$datetime);
+    $firstDate = new ExpansionDateTime('first day of '.$datetime);
 		$firstWeek = $firstDate->format('w');
+		logger_r("calender::create_calender [firstDate] : ",$firstDate);
+		logger("calender::create_calender [firstWeek] : ".$firstWeek." [week] : ".self::wd[$firstWeek]);
+
 		//月終わり
-    	$lastDate  = new ExpansionDateTime('last day of '.$datetime);
+    $lastDate  = new ExpansionDateTime('last day of '.$datetime);
 		$lastWeek  = $lastDate->format('w');
-		$lastDay 	 = $lastDate->format('d');
-		// 先月、来月の始め
+		logger_r("calender::create_calender [lastDate] : ",$lastDate);
+		logger("calender::create_calender [lastWeek] : ".$lastWeek." [week] : ".self::wd[$lastWeek]);
+
+		// 次月、前月の始め
 		$return_date = new ExpansionDateTime('last day of '.$datetime.' last month');
 		$advance_date= new ExpansionDateTime('first day of '.$datetime.' next month');
 		$rd = $return_date->format('Y-m-d');
 		$ad = $advance_date->format('Y-m-d');
+		logger("calender::create_calender [rd] : ".$rd);
+		logger("calender::create_calender [ad] : ".$ad);
+
+		// 現在選択している月の最後の日付を繰り返す
+		$calender_count 	 = $lastDate->format('d');
+		logger("calender::create_calender [calender_count] : ".$calender_count);
 
 		// テーブルヘッダー部分
 		$calender_header = $this->calender_header($year, $month, $day, $rd, $ad);
 		$weekday_header  = $this->weekday_header();
 
+
+		$st = '-'. ($firstWeek+1) .' days';
+		logger("calender::create_calender [st] : ".$st);
+		$firstDate->modify($st);
+
 		// 初めの空白部分
 		$firsttable = "";
 		for($i=0;$i<$firstWeek;$i++){
+			$backday = $firstDate->modify('+1 days');
+			logger("calender::create_calender [backday] : ".$backday->format("Y-m-d"));
+
 			$td = <<<HTML
-				<td class='day--disabled'>
-				</td>\n
-			HTML;
+			<td class='day--disabled'>
+			</td>\n
+HTML;
 			$firsttable .= $td;
 		}
 
 		// カレンダー部分
 		$calender = "";
 		$today = date("Y-m-d");
-		for($j=1;$j<=$lastDay;$j++){
+		for($j=1;$j<=$calender_count;$j++){
 			$date = $year .'-'. $month .'-'. sprintf("%02d",$j);
 			$ExpansionDateTime = new ExpansionDateTime($date);
-      		$holiday = $ExpansionDateTime->holiday();
+      $holiday = $ExpansionDateTime->holiday();
 			$weekday = $ExpansionDateTime->format('D');
-			// print($j .' : '. $weekday .' : '. $weeknumber . '<br>');
+			logger("calender::create_calender [date] : ".$date." [weekday] : ".$weekday." [holiday] : ".$holiday);
 
 			if($j == $day){
 				//選択した日付
@@ -74,24 +97,27 @@ class calender{
 		// 最後の空白部分
 		$lasttable = "";
 		for($k=0;$k<(6-$lastWeek);$k++){
+			$nextday = $lastDate->modify('+1 days');
+			logger("calender::create_calender [next_date] : ".$nextday->format("Y-m-d"));
+
 			$td = <<<HTML
-				<td class='day--disabled'>
-				</td>\n
-			HTML;
+			<td class='day--disabled'>
+			</td>\n
+HTML;
 			$lasttable .= $td;
 		}
 
 		$html = <<<HTML
-			<table>
-				{$calender_header}
-				{$weekday_header}
-				<tr>
-					{$firsttable}
-					{$calender}
-					{$lasttable}
-				</tr>
-			</table>\n
-		HTML;
+		<table>
+			{$calender_header}
+			{$weekday_header}
+			<tr>
+				{$firsttable}
+				{$calender}
+				{$lasttable}
+			</tr>
+		</table>\n
+HTML;
 		return $html;
 	}
 
@@ -104,15 +130,14 @@ class calender{
 				<th colspan="5">{$year}/{$month}/{$day}</th>
 				<th><a href="?date={$ad}" ><i class="material-icons">chevron_right</i></a></th>
 			</tr>
-		HTML;
+HTML;
 		return $calender_header;
 	}
 
 	private function weekday_header(){
 		// 曜日
 		$weekday = "";
-		$wd = array("日","月","火","水","木","金","土");
-		foreach($wd as $value){
+		foreach(self::wd as $value){
 			$color = $this->week_color($value);
 			$weekday .= "<th{$color}>{$value}</th>\n";
 		}
@@ -135,16 +160,14 @@ class calender{
 		return $result;
 	}
 
-
-
 	private function nomal_table($color,$date,$i){
 		$td = <<<HTML
-			<td{$color}>
-				<a href="?date={$date}">
-					{$i}
-				</a>
-			</td>\n
-		HTML;
+		<td{$color}>
+			<a href="?date={$date}">
+				{$i}
+			</a>
+		</td>\n
+HTML;
 		return $td;
 	}
 

@@ -1,18 +1,48 @@
 そのほかの休日を追加してみよう。
 年間休日とかでしらべると国が出してる休日項目から追加してみる。
-
+とりあえず春分の日と秋分の日を追加できれば大丈夫です。（2019年だけ表示されればよし）
+春分の日　2019年3月21日
+秋分の日　2019年9月23日
 
 カレンダーの曜日を英語表記にしたい
-Calender.phpのなかに表記してあるので修正してみる。
+  ヒント１
+  Calender.phpのなかに表記してあるので修正してみる。
 
+先ほどのカレンダーで来月の日付を空白の中に入れました。
+なので次は先月の日付を空白の中に入れてみよう。
+	ヒント1
+  変数$firstWeekに入っているものをログで確認してみよう。
+	月初めの日にちの曜日が数字としてでてくるよ。（日曜は０月曜は１）
 
-今月のカレンダーのに先月、来月の日付を入れてみる。
-ヒント：$firstDate->modify(‘- 7 days’);
+	ヒント2
+	変数$backdayに入っているものをログで確認してみよう。
+	そのあと
+  $backday->format("Y-m-d")
+  がどのようなものが取れるかをログで確認してみよう。
+
+	ヒント3
+  $td = <<<HTML
+  <td class='day--disabled'>
+    <a href="?date=2019-08-01">
+      1
+    </a>
+  </td>\n
+  HTML;
+  この形に合わせてfor文の中身を修正してみよう。
 
 
 プレミアムフライデーをカレンダーに表示してみよう。(難問)
-ヒント：new ExpansionDateTime('last fri of');
+  ヒント1
+  private function premiumHoliday($month, $weekday, $start, $end, $name){
+    $now = clone $this;
+    $nowdate = $now->format('Y-m-d');
+  }
+  これがすでにExpansionDateTime.phpに書いてあるよ。
 
+  ヒント2
+  $lastweekday = new ExpansionDateTime('last '.self::$weekdaylist[$weekday].' of '.$nowdate);
+  $lastweekday = $lastweekday->format('Y-m-d');
+  とりあえずこれをヒント１の場所に記入してみてログを出してみよう。
 
 答えがわからない場合はここに答えみたいなのがあります。
 https://github.com/style-kensyu/intern

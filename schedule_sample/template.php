@@ -20,7 +20,7 @@ class template{
           <button class='button1' type='submit' value={$i} name='delete'>削除</button>
         </div>
       </li>
-    HTML;
+HTML;
 
   echo $html;
   }
@@ -31,9 +31,8 @@ class template{
    */
   function schedule_holiday($holiday){
     $html = <<<HTML
-      <li class='list-count'><font color='red' style='font-size:15px'>{$holiday}</font>
-    HTML;
-
+<li class='list-count'><font color='red' style='font-size:15px'>{$holiday}</font>
+HTML;
     echo $html;
   }
 
