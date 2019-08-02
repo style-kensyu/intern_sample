@@ -4,6 +4,11 @@ class calender{
 
 	const wd = array("日","月","火","水","木","金","土");
 
+	/**
+   * カレンダー作成
+   * @param $schedule_array スケジュール
+	 * @param $datetime 選択された日付
+   */
 	public function create_calender($schedule_array,$datetime){
 		$selectDateTime = new ExpansionDateTime($datetime);
 
@@ -15,13 +20,15 @@ class calender{
 		//月初め
     $firstDate = new ExpansionDateTime('first day of '.$datetime);
 		$firstWeek = $firstDate->format('w');
-		logger_r("calender::create_calender [firstDate] : ",$firstDate);
+		// logger_r("calender::create_calender [firstDate] : ",$firstDate);
+		logger("calender::create_calender [firstDate] : ".$firstDate->format('Y-m-d'));
 		logger("calender::create_calender [firstWeek] : ".$firstWeek." [week] : ".self::wd[$firstWeek]);
 
 		//月終わり
     $lastDate  = new ExpansionDateTime('last day of '.$datetime);
 		$lastWeek  = $lastDate->format('w');
-		logger_r("calender::create_calender [lastDate] : ",$lastDate);
+		// logger_r("calender::create_calender [lastDate] : ",$lastDate);
+		logger("calender::create_calender [lastDate] : ".$lastDate->format('Y-m-d'));
 		logger("calender::create_calender [lastWeek] : ".$lastWeek." [week] : ".self::wd[$lastWeek]);
 
 		// 次月、前月の始め
@@ -40,7 +47,6 @@ class calender{
 		$calender_header = $this->calender_header($year, $month, $day, $rd, $ad);
 		$weekday_header  = $this->weekday_header();
 
-
 		$st = '-'. ($firstWeek+1) .' days';
 		logger("calender::create_calender [st] : ".$st);
 		$firstDate->modify($st);
@@ -50,6 +56,7 @@ class calender{
 		for($i=0;$i<$firstWeek;$i++){
 			$backday = $firstDate->modify('+1 days');
 			logger("calender::create_calender [backday] : ".$backday->format("Y-m-d"));
+			logger("calender::create_calender [day] : ".$backday->format("j"));
 
 			$td = <<<HTML
 			<td class='day--disabled'>
@@ -83,6 +90,7 @@ HTML;
 			// 予定がある場合追加
 			$daytext = "";
 			if(in_array($date,$schedule_array)) $daytext .= '<i class="material-icons md-18">schedule</i>';
+
 			$daytext .= $j;
 
 			$td = $this->nomal_table($color,$date,$daytext);
@@ -98,7 +106,10 @@ HTML;
 		$lasttable = "";
 		for($k=0;$k<(6-$lastWeek);$k++){
 			$nextday = $lastDate->modify('+1 days');
-			logger("calender::create_calender [next_date] : ".$nextday->format("Y-m-d"));
+			logger("calender::create_calender [nextday] : ".$nextday->format("Y-m-d"));
+			logger("calender::create_calender [day] : ".$nextday->format("j"));
+			$date = $nextday->format("Y-m-d");
+			$day 	= $nextday->format("j");
 
 			$td = <<<HTML
 			<td class='day--disabled'>
@@ -123,6 +134,14 @@ HTML;
 
 //====== private ========
 
+	/**
+	 * カレンダーのテーブルヘッダー作成
+	 * @param $year 年
+	 * @param $month 月
+	 * @param $day 日
+	 * @param $rd 先月の年月日
+	 * @param $ad 来月の年月日
+	 */
 	private function calender_header($year, $month, $day, $rd, $ad){
 		$calender_header = <<<HTML
 			<tr>
@@ -134,6 +153,9 @@ HTML;
 		return $calender_header;
 	}
 
+	/**
+	 * カレンダーの曜日テーブルヘッダーの作成
+	 */
 	private function weekday_header(){
 		// 曜日
 		$weekday = "";
@@ -145,26 +167,57 @@ HTML;
 		return "\n<tr>\n{$weekday}</tr>\n";
 	}
 
+	/**
+	 * カレンダーの曜日によって色を変える
+	 * @param $weekday
+	 */
 	private function week_color($weekday){
 		$result = "";
 		switch ($weekday) {
 			case 'Sun':
 			case '日':
 				$result = ' bgcolor = "#FFE4E1" ';
-				break;
+			break;
+
+			case 'Mon':
+			case '月':
+			break;
+
+			case 'Tue':
+			case '火':
+			break;
+
+			case 'Wed':
+			case '水':
+			break;
+
+			case 'Thu':
+			case '木':
+			break;
+
+			case 'Fri':
+			case '金':
+			break;
+
 			case 'Sat':
 			case '土':
 				$result = ' bgcolor = "#E0FFFF" ';
-				break;
+			break;
 		}
 		return $result;
 	}
 
-	private function nomal_table($color,$date,$i){
+	/**
+	 * カレンダーの曜日によって色を変える
+	 * @param $css css
+	 * @param $date 年月日
+	 * @param $day 日
+	 */
+	private function nomal_table($css,$date,$day){
 		$td = <<<HTML
-		<td{$color}>
+		<td{$css}>
 			<a href="?date={$date}">
-				{$i}
+				{$day}
 			</a>
 		</td>\n
 HTML;

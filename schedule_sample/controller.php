@@ -1,13 +1,5 @@
 <?php
-
-include('settings.php');
-include('db.php');
-include('calender.php');
-include('expansiondatetime.php');
-include('utile.php');
-include('model.php');
-include('template.php');
-include('logger.php');
+require_once 'settings.php';
 
 try{
 // class　を呼び出してるよ！

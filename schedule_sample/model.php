@@ -6,7 +6,10 @@ function __construct(){
     parent:: __construct();
 }
 
-// スケジュール
+/**
+ * スケジュール取得
+ * @param $date 年月日
+ */
 function select_schedule($date){
     logger("model::select_schedule() [date]:" . $date);
     $sql = <<<SQL
@@ -21,6 +24,10 @@ SQL;
     return $result;
 }
 
+/**
+ * 月のスケジュール取得
+ * @param $date 年月日
+ */
 function month_schedule($date){
     logger("model::select_schedule() [date]:" . $date);
     $sql = <<<SQL
@@ -34,28 +41,47 @@ SQL;
     return $result;
 }
 
-function reg_schedule($plan,$time){
-    logger("model::reg_schedule() [plan]:" . $plan . " [time]:" . $time);
-  	$sql = "INSERT INTO userschedule (text,type,reg_date) VALUES ('{$plan}',1,'{$time}')";
+/**
+ * スケジュール登録
+ * @param $plan 予定
+ * @param $date 年月日時間
+ */
+function reg_schedule($plan,$date){
+    logger("model::reg_schedule() [plan]:" . $plan . " [date]:" . $date);
+  	$sql = "INSERT INTO userschedule (text,type,reg_date) VALUES ('{$plan}',1,'{$date}')";
     $result = $this->query($sql);
 }
 
-function delete_schedule($delete){
-    logger("model::delete_schedule() [delete]:" . $date);
-    $sql = "UPDATE userschedule SET status = 1 WHERE sid = {$delete}";
+/**
+ * スケジュール削除
+ * @param $sid スケジュールID
+ */
+function delete_schedule($sid){
+    logger("model::delete_schedule() [sid]:" . $sid);
+    $sql = "UPDATE userschedule SET status = 1 WHERE sid = {$sid}";
     $result = $this->query($sql);
 }
 
-function change_schedule($change,$plan,$time){
-    logger("model::change_schedule() [change]:" . $change . " [plan]:" . $plan . " [time]:" .$time);
+/**
+ * スケジュール変更
+ * @param $sid スケジュールID
+ * @param $plan 予定
+ * @param $date 年月日時間
+ */
+function change_schedule($sid,$plan,$date){
+    logger("model::change_schedule() [sid]:" . $sid . " [plan]:" . $plan . " [date]:" .$date);
     $sql = "UPDATE userschedule SET ";
 
     if($plan) $sql .= "text = '{$plan}' ,";
 
-    $sql .="reg_date = '{$time}' WHERE sid = {$change}";
+    $sql .="reg_date = '{$date}' WHERE sid = {$sid}";
     $result = $this->query($sql);
 }
 
+/**
+ * スケジュール変更
+ * @param $sql クエリ
+ */
 function query($sql){
   logger("model::query() sql \n" . $sql);
   $result = $this->db->query($sql);

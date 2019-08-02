@@ -41,7 +41,6 @@ class ExpansionDateTime extends DateTime
       ['fixed',   2, 24, 1989, 1989, '昭和天皇の大喪の礼'],
       ['fixed',  11, 12, 1990, 1990, '即位礼正殿の儀'],
       ['fixed',   6,  9, 1993, 1993, '皇太子徳仁親王の結婚の儀'],
-      ['premium', 0,  5, 9999, 9999, 'プレミアムフライデー'],
     ];
 
   private static $gengolist = [
@@ -148,7 +147,7 @@ class ExpansionDateTime extends DateTime
    private function premiumHoliday($month, $weekday, $start, $end, $name){
      $now = clone $this;
      $nowdate = $now->format('Y-m-d');
-     
+
    }
 
     /**

@@ -13,6 +13,13 @@
 	ヒント1
   変数$firstWeekに入っているものをログで確認してみよう。
 	月初めの日にちの曜日が数字としてでてくるよ。（日曜は０月曜は１）
+  そのあと
+
+  $st = '-'. ($firstWeek+1) .' days';
+  logger("calender::create_calender [st] : ".$st);
+  $firstDate->modify($st);
+
+  この部分がどうゆう動きをしているかを調べてみよう。
 
 	ヒント2
 	変数$backdayに入っているものをログで確認してみよう。
@@ -32,6 +39,12 @@
 
 
 プレミアムフライデーをカレンダーに表示してみよう。(難問)
+やってみる前に
+
+['premium', 0,  5, 9999, 9999, 'プレミアムフライデー'],
+
+これを休日配列にいれて置く。
+
   ヒント1
   private function premiumHoliday($month, $weekday, $start, $end, $name){
     $now = clone $this;
@@ -43,6 +56,9 @@
   $lastweekday = new ExpansionDateTime('last '.self::$weekdaylist[$weekday].' of '.$nowdate);
   $lastweekday = $lastweekday->format('Y-m-d');
   とりあえずこれをヒント１の場所に記入してみてログを出してみよう。
+
+  ヒント3
+  ログを見ながら先ほどのコードの下にif文を書いてコードを完成させてみよう。
 
 答えがわからない場合はここに答えみたいなのがあります。
 https://github.com/style-kensyu/intern
