@@ -1,3 +1,10 @@
+/*
+ C#
+
+ 主にunityの言語として有名
+ 
+*/
+
 public class test{
   public static void Main(){
    if_test(1000);

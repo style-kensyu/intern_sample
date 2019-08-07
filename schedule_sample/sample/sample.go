@@ -1,3 +1,11 @@
+
+/*
+ go言語
+ 
+ Googleによって開発されたプログラミング言語の1つ
+
+*/
+
 package main
 import "fmt"
 func main(){

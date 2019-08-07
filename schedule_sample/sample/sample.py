@@ -1,4 +1,9 @@
 # python3
+#
+# python
+#
+# AIに特化した言語
+
 def if_test(num):
     if num > 100:
         print('100 < num')

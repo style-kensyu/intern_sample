@@ -1,3 +1,10 @@
+/*
+  javascript
+
+  webブラウザの動きを作ることができる
+
+*/
+
 function if_test($num){
   if($num > 100){
     console.log("100 < num");

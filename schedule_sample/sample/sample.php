@@ -1,4 +1,10 @@
 <?php
+/*
+  php
+
+  webサービスを作成することができる言語
+*/
+
 function if_test($num){
   if($num > 100){
     printf("100 < num\n");

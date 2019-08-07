@@ -1,3 +1,7 @@
+#ruby
+#
+#日本人によって作られた言語
+
 def if_test(num)
   if num > 100 then
     print("100 < num\n")

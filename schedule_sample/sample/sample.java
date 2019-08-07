@@ -1,3 +1,10 @@
+/*
+  java
+
+  有名なプログラミング言語
+  Androidアプリを作成するのにもつかわれる。
+*/
+
 import java.util.*;
 public class Test {
   public static void main(String[] args) throws Exception {

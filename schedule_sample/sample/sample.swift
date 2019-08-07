@@ -1,3 +1,6 @@
+# swift
+# ios作成に作られる言語
+
 func if_test(num : Int){
     if(num > 100){
       print("100 < num\n");
