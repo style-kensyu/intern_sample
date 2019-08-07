@@ -18,14 +18,14 @@ class calender{
 		logger("calender::create_calender [year] : ".$year." [month] :".$month." [day] :".$day);
 
 		//月初め
-    $firstDate = new ExpansionDateTime('first day of '.$datetime);
+    	$firstDate = new ExpansionDateTime('first day of '.$datetime);
 		$firstWeek = $firstDate->format('w');
 		// logger_r("calender::create_calender [firstDate] : ",$firstDate);
 		logger("calender::create_calender [firstDate] : ".$firstDate->format('Y-m-d'));
 		logger("calender::create_calender [firstWeek] : ".$firstWeek." [week] : ".self::wd[$firstWeek]);
 
 		//月終わり
-    $lastDate  = new ExpansionDateTime('last day of '.$datetime);
+   		$lastDate  = new ExpansionDateTime('last day of '.$datetime);
 		$lastWeek  = $lastDate->format('w');
 		// logger_r("calender::create_calender [lastDate] : ",$lastDate);
 		logger("calender::create_calender [lastDate] : ".$lastDate->format('Y-m-d'));
@@ -71,7 +71,7 @@ HTML;
 		for($j=1;$j<=$calender_count;$j++){
 			$date = $year .'-'. $month .'-'. sprintf("%02d",$j);
 			$ExpansionDateTime = new ExpansionDateTime($date);
-      $holiday = $ExpansionDateTime->holiday();
+      		$holiday = $ExpansionDateTime->holiday();
 			$weekday = $ExpansionDateTime->format('D');
 			logger("calender::create_calender [date] : ".$date." [weekday] : ".$weekday." [holiday] : ".$holiday);
 
@@ -90,10 +90,15 @@ HTML;
 			// 予定がある場合追加
 			$daytext = "";
 			if(in_array($date,$schedule_array)) $daytext .= '<i class="material-icons md-18">schedule</i>';
-
 			$daytext .= $j;
 
-			$td = $this->nomal_table($color,$date,$daytext);
+			$td = <<<HTML
+				<td{$color}>
+					<a href="?date={$date}">
+						{$daytext}
+					</a>
+				</td>\n
+HTML;
 
 			if(($j+$i)%7 == 0){
 				$td .= "\n</tr>\n<tr>\n";

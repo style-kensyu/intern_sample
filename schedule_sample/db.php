@@ -6,36 +6,34 @@ class db{
     {
         // $this->initDB();
 
-				if($this->initDB()){
-					$this->createDB();
-				}
+		if($this->initDB()){
+			$this->createDB();
+		}
 
     }
 
 		// db 作成
-		public function createDB(){
-			$dbname 	= "mysql:host=localhost;charset=utf8mb4;";
+	public function createDB(){
+		$dbname 	= "mysql:host=localhost;charset=utf8mb4;";
 	    $usrname 	= "root";
-			$psword 	= "";
+		$psword 	= "";
 
-      try{
-  	    $this->db = new PDO($dbname, $usrname, $psword);
-				$sql = "CREATE DATABASE schedule";
-				$this->db->exec($sql);
-
-				$this->createTable();
-
-      }catch(PDOException $e){
+      	try{
+  	    	$this->db = new PDO($dbname, $usrname, $psword);
+			$sql = "CREATE DATABASE schedule";
+			$this->db->exec($sql);
+			$this->createTable();
+		}catch(PDOException $e){
           echo $e->getMessage();
           exit;
-      }
-		}
+     	}
+	}
 
-		public function createTable(){
-			// 接続
-			$this->initDB();
+	public function createTable(){
+		// 接続
+		$this->initDB();
 
-			$sql = <<<SQL
+		$sql = <<<SQL
 CREATE TABLE `userschedule` (
 `sid` int(11) NOT NULL,
 `text` varchar(194) CHARACTER SET utf8mb4 NOT NULL,
@@ -49,28 +47,26 @@ ADD PRIMARY KEY (`sid`);
 
 ALTER TABLE `userschedule`
 MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT
-
 SQL;
 
-		$this->query($sql);
+	$this->query($sql);
 
-		}
+	}
 
     // db接続
-    public function initDB()
-    {
-      $dbname 	= "mysql:dbname=schedule;host=localhost;charset=utf8mb4;";
+    public function initDB(){
+    	$dbname 	= "mysql:dbname=schedule;host=localhost;charset=utf8mb4;";
 	    $usrname 	= "root";
-			$psword 	= "";
+		$psword 	= "";
 
-      try{
-  	    $this->db = new PDO($dbname, $usrname, $psword);
-				return false;
-      }catch(PDOException $e){
-          // echo $e->getMessage();
-				return true;
-          // exit;
-      }
+      	try{
+  	    	$this->db = new PDO($dbname, $usrname, $psword);
+			return false;
+      	}catch(PDOException $e){
+          	// echo $e->getMessage();
+			return true;
+          	// exit;
+      	}
     }
 }
 

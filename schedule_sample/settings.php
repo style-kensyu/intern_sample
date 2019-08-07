@@ -21,6 +21,9 @@
 
   function logger_r($text="",$log=[]){
     $time = date('Y-m-d H:i:s', time());
+
+    if(count($log) == 0) $log = null;
+
     error_log("[$time] $text\r\n". print_r($log,true),3,ini_get("error_log"));
   }
 ?>

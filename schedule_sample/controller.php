@@ -3,8 +3,6 @@ require_once 'settings.php';
 
 try{
 // class　を呼び出してるよ！
-
-
 $logger     = new logger();
 $calClass   = new calender();
 $utileClass = new utile();
