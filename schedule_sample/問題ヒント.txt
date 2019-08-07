@@ -39,6 +39,10 @@
 
 
 ・プレミアムフライデーをカレンダーに表示してみよう。(難問)
+['premium', 0,  5, 9999, 9999, 'プレミアムフライデー'],
+
+これを休日の配列の中に入れておこう
+
     ヒント1
     private function premiumHoliday($month, $weekday, $start, $end, $name){
       $now = clone $this;
@@ -50,11 +54,16 @@
     ヒント2
     $lastweekday = new ExpansionDateTime('last '.self::$weekdaylist[$weekday].' of '.$nowdate);
     $lastweekday = $lastweekday->format('Y-m-d');
+    logger("expansiondatetime::premiumHoliday [nowdate] : ".$nowdate);
+    logger("expansiondatetime::premiumHoliday [lastweekday] : ".$lastweekday);
+    return $name;
+
     とりあえずこれをヒント１の場所に記入してみてログを出してみよう。
 
     ヒント3
-    ログを見ながら先ほどのコードの下にif文を書いてコードを完成させてみよう。
-
+    ログを見ながら先ほどのコードからnowdateとlastweekdayの違いをみて
+    return $name;
+    の前にコードを追加してみよう。
 
 答えがわからない場合はここに答えみたいなのがあります。
 https://github.com/style-kensyu/intern
