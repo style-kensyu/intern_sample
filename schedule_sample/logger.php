@@ -6,11 +6,7 @@ class logger{
   }
 
   function set_logger(){
-    if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-      $path = "/xampp/xamppfiles/logs/schedule/";
-    } else {
-      $path = "/Applications/XAMPP/xamppfiles/logs/schedule/";
-    }
+    $path = "log/";
 
     if(!file_exists($path)){
       mkdir($path,0777,true);
