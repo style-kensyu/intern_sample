@@ -89,14 +89,14 @@ HTML;
 			}
 
 			// 予定がある場合追加
-			$daytext = "";
-			if(in_array($date,$schedule_array)) $daytext .= '<i class="material-icons md-18">schedule</i>';
+			$day = "";
+			if(in_array($date,$schedule_array)) $day .= '<i class="material-icons md-18">schedule</i>';
 			$daytext .= $j;
 
 			$td = <<<HTML
 				<td{$color}>
 					<a href="?date={$date}">
-						{$daytext}
+						{$day}
 					</a>
 				</td>\n
 HTML;
@@ -115,8 +115,14 @@ HTML;
 			logger("calender::create_calender [nextday] : ".$nextday->format("Y-m-d"));
 			logger("calender::create_calender [day] : ".$nextday->format("j"));
 			$date = $nextday->format("Y-m-d");
-			$day 	= $nextday->format("j");
+			$day  = $nextday->format("j");
 
+			/*
+				// これをtdの中に書けば日付が出るよ
+				<a href="?date={$date}">
+					{$day}
+				</a>
+			*/
 			$td = <<<HTML
 			<td class='day--disabled'>
 			</td>\n
