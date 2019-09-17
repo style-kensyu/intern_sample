@@ -4,16 +4,19 @@
   春分の日　3月21日
   秋分の日　9月23日
 
+  ヒント1
+    ['fixed',   3, 21, 2019, 2019, '春分の日'],
+    ['fixed',   9, 23, 2019, 2019, '秋分の日'],
+
 ・カレンダーの曜日を英語表記にしたい
-"Sun","Mon","Tue","Wed","Thu","Fri","Sat"
+  "Sun","Mon","Tue","Wed","Thu","Fri","Sat"
     ヒント１
-    Calender.phpのなかに表記してあるので修正してみる。(コメントでも書いてあるよ)
+    Calender.phpのなかの6行目あたりに表記してあるので修正してみる。(コメントでも書いてあるよ)
 
 ・カレンダーの水曜日の色を変更したい。
   (カラーコードと検索して好きな色に変更してみよう)
   　ヒント１
-    calender.phpの中身にあるweek_color()の中身を見てみよう。
-
+    calender.phpの中身にある186行目あたりにあるweek_color()の中身を見てみよう。
 
 ・先ほどのカレンダーで来月の日付を空白の中に入れました。
   なので次は先月の日付を空白の中に入れてみよう。
@@ -21,23 +24,23 @@
       「初めの空白部分」と書いてある場所を探してみよう。
       （calender.phpの55目あたりにあるよ）
       そこで先ほど使った
-        <a href="?date={$date}">
-          {$day}
+        <a href="?date={$formatdate}">
+          {$formatday}
         </a>
         を同じ風に書いてみよう
   	ヒント2
     　　エラーが出ると思うので
 
-        $date = $backday->format("Y-m-d");
-        $day  = $backday->format("j");
+        $formatdate = $backday->format("Y-m-d");
+        $formatday  = $backday->format("j");
         
         このコードをさきほどやった場所を参考に追加してみよう
 
 ・プレミアムフライデーをカレンダーに表示してみよう。(難問)
 
-これを休日の配列の中に入れておこう
-↓
-['premium', 0,  5, 9999, 9999, 'プレミアムフライデー'],
+  これを休日の配列の中に入れておこう
+  ↓
+  ['premium', 0,  5, 9999, 9999, 'プレミアムフライデー'],
 
     ヒント1
     private function premiumHoliday($month, $weekday, $start, $end, $name){

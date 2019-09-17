@@ -89,14 +89,14 @@ HTML;
 			}
 
 			// 予定がある場合追加
-			$day = "";
-			if(in_array($date,$schedule_array)) $day .= '<i class="material-icons md-18">schedule</i>';
+			$daytext = "";
+			if(in_array($date,$schedule_array)) $daytext .= '<i class="material-icons md-18">schedule</i>';
 			$daytext .= $j;
 
 			$td = <<<HTML
 				<td{$color}>
 					<a href="?date={$date}">
-						{$day}
+						{$daytext}
 					</a>
 				</td>\n
 HTML;
@@ -112,15 +112,15 @@ HTML;
 		$lasttable = "";
 		for($k=0;$k<(6-$lastWeek);$k++){
 			$nextday = $lastDate->modify('+1 days');
-			logger("calender::create_calender [nextday] : ".$nextday->format("Y-m-d"));
-			logger("calender::create_calender [day] : ".$nextday->format("j"));
-			$date = $nextday->format("Y-m-d");
-			$day  = $nextday->format("j");
+			logger("calender::create_calender [formatdate] : ".$nextday->format("Y-m-d"));
+			logger("calender::create_calender [formatday] : ".$nextday->format("j"));
+			// $formatdate = $nextday->format("Y-m-d");
+			// $formatday  = $nextday->format("j");
 
 			/*
 				// これをtdの中に書けば日付が出るよ
-				<a href="?date={$date}">
-					{$day}
+				<a href="?date={$formatdate}">
+					{$formatday}
 				</a>
 			*/
 			$td = <<<HTML

@@ -1,0 +1,1306 @@
+[2019-09-17 10:17:01] ======== start puroguramu ========
+[2019-09-17 10:17:01] controller:: GET : 
+Array
+(
+    [date] => 2019-05-01
+)
+[2019-09-17 10:17:01] controller:: POST: 
+[2019-09-17 10:17:01] controller:: [select date] : 2019-05-01
+[2019-09-17 10:17:01] controller:: [year] : 2019 [month] : 05 [gengo] : 平成31年
+[2019-09-17 10:17:01] model::select_schedule() [date]:2019-05-01
+[2019-09-17 10:17:01] model::query() sql 
+SELECT sid,text,DATE_FORMAT(reg_date,'%H:%i') as time
+FROM userschedule
+WHERE reg_date LIKE '2019-05-01%'
+AND status = 0
+ORDER BY reg_date
+[2019-09-17 10:17:01] controller:: [schedule]
+[2019-09-17 10:17:01] model::select_schedule() [date]:2019-05
+[2019-09-17 10:17:01] model::query() sql 
+SELECT DATE_FORMAT(reg_date,'%Y-%m-%d') as sch
+FROM userschedule
+WHERE reg_date LIKE '2019-05%'
+AND status = 0
+GROUP BY DATE_FORMAT(reg_date,'%Y-%m-%d')
+[2019-09-17 10:17:01] controller:: [month_schedule]
+[2019-09-17 10:17:01] calender::create_calender [year] : 2019 [month] :05 [day] :01
+[2019-09-17 10:17:01] calender::create_calender [firstDate] : 2019-05-01
+[2019-09-17 10:17:01] calender::create_calender [firstWeek] : 3 [week] : 水
+[2019-09-17 10:17:01] calender::create_calender [lastDate] : 2019-05-31
+[2019-09-17 10:17:01] calender::create_calender [lastWeek] : 5 [week] : 金
+[2019-09-17 10:17:01] calender::create_calender [rd] : 2019-04-30
+[2019-09-17 10:17:01] calender::create_calender [ad] : 2019-06-01
+[2019-09-17 10:17:01] calender::create_calender [calender_count] : 31
+[2019-09-17 10:17:01] calender::create_calender [st] : -4 days
+[2019-09-17 10:17:01] calender::create_calender [backday] : 2019-04-28
+[2019-09-17 10:17:01] calender::create_calender [day] : 28
+[2019-09-17 10:17:01] calender::create_calender [backday] : 2019-04-29
+[2019-09-17 10:17:01] calender::create_calender [day] : 29
+[2019-09-17 10:17:01] calender::create_calender [backday] : 2019-04-30
+[2019-09-17 10:17:01] calender::create_calender [day] : 30
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-01 [weekday] : Wed [holiday] : 
+[17-Sep-2019 10:17:01 Asia/Tokyo] PHP Notice:  Undefined variable: daytext in C:\xampp\htdocs\schedule_sample\calender.php on line 94
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-02 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-03 [weekday] : Fri [holiday] : 憲法記念日
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-04 [weekday] : Sat [holiday] : みどりの日
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-05 [weekday] : Sun [holiday] : こどもの日
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-06 [weekday] : Mon [holiday] : 振替休日
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-07 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-08 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-09 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-10 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-11 [weekday] : Sat [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-12 [weekday] : Sun [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-13 [weekday] : Mon [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-14 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-15 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-16 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-17 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-18 [weekday] : Sat [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-19 [weekday] : Sun [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-20 [weekday] : Mon [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-21 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-22 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-23 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-24 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-25 [weekday] : Sat [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-26 [weekday] : Sun [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-27 [weekday] : Mon [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-28 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-29 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-30 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [date] : 2019-05-31 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:01] calender::create_calender [nextday] : 2019-06-01
+[2019-09-17 10:17:01] calender::create_calender [day] : 1
+[2019-09-17 10:17:01] controller:: [holiday] : 
+[2019-09-17 10:17:01] controller:: [color] : #6c2463
+[2019-09-17 10:17:01] ======== end puroguramu ========
+[2019-09-17 10:17:21] ======== start puroguramu ========
+[2019-09-17 10:17:21] controller:: GET : 
+Array
+(
+    [date] => 2019-05-01
+)
+[2019-09-17 10:17:21] controller:: POST: 
+[2019-09-17 10:17:21] controller:: [select date] : 2019-05-01
+[2019-09-17 10:17:21] controller:: [year] : 2019 [month] : 05 [gengo] : 平成31年
+[2019-09-17 10:17:21] model::select_schedule() [date]:2019-05-01
+[2019-09-17 10:17:21] model::query() sql 
+SELECT sid,text,DATE_FORMAT(reg_date,'%H:%i') as time
+FROM userschedule
+WHERE reg_date LIKE '2019-05-01%'
+AND status = 0
+ORDER BY reg_date
+[2019-09-17 10:17:21] controller:: [schedule]
+[2019-09-17 10:17:21] model::select_schedule() [date]:2019-05
+[2019-09-17 10:17:21] model::query() sql 
+SELECT DATE_FORMAT(reg_date,'%Y-%m-%d') as sch
+FROM userschedule
+WHERE reg_date LIKE '2019-05%'
+AND status = 0
+GROUP BY DATE_FORMAT(reg_date,'%Y-%m-%d')
+[2019-09-17 10:17:21] controller:: [month_schedule]
+[2019-09-17 10:17:21] calender::create_calender [year] : 2019 [month] :05 [day] :01
+[2019-09-17 10:17:21] calender::create_calender [firstDate] : 2019-05-01
+[2019-09-17 10:17:21] calender::create_calender [firstWeek] : 3 [week] : 水
+[2019-09-17 10:17:21] calender::create_calender [lastDate] : 2019-05-31
+[2019-09-17 10:17:21] calender::create_calender [lastWeek] : 5 [week] : 金
+[2019-09-17 10:17:21] calender::create_calender [rd] : 2019-04-30
+[2019-09-17 10:17:21] calender::create_calender [ad] : 2019-06-01
+[2019-09-17 10:17:21] calender::create_calender [calender_count] : 31
+[2019-09-17 10:17:21] calender::create_calender [st] : -4 days
+[2019-09-17 10:17:21] calender::create_calender [backday] : 2019-04-28
+[2019-09-17 10:17:21] calender::create_calender [day] : 28
+[2019-09-17 10:17:21] calender::create_calender [backday] : 2019-04-29
+[2019-09-17 10:17:21] calender::create_calender [day] : 29
+[2019-09-17 10:17:21] calender::create_calender [backday] : 2019-04-30
+[2019-09-17 10:17:21] calender::create_calender [day] : 30
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-01 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-02 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-03 [weekday] : Fri [holiday] : 憲法記念日
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-04 [weekday] : Sat [holiday] : みどりの日
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-05 [weekday] : Sun [holiday] : こどもの日
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-06 [weekday] : Mon [holiday] : 振替休日
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-07 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-08 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-09 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-10 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-11 [weekday] : Sat [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-12 [weekday] : Sun [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-13 [weekday] : Mon [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-14 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-15 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-16 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-17 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-18 [weekday] : Sat [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-19 [weekday] : Sun [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-20 [weekday] : Mon [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-21 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-22 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-23 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-24 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-25 [weekday] : Sat [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-26 [weekday] : Sun [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-27 [weekday] : Mon [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-28 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-29 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-30 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [date] : 2019-05-31 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:21] calender::create_calender [nextday] : 2019-06-01
+[2019-09-17 10:17:21] calender::create_calender [day] : 1
+[2019-09-17 10:17:21] controller:: [holiday] : 
+[2019-09-17 10:17:21] controller:: [color] : #6c2463
+[2019-09-17 10:17:21] ======== end puroguramu ========
+[2019-09-17 10:17:47] ======== start puroguramu ========
+[2019-09-17 10:17:47] controller:: GET : 
+Array
+(
+    [date] => 2019-05-01
+)
+[2019-09-17 10:17:47] controller:: POST: 
+[2019-09-17 10:17:47] controller:: [select date] : 2019-05-01
+[2019-09-17 10:17:47] controller:: [year] : 2019 [month] : 05 [gengo] : 平成31年
+[2019-09-17 10:17:47] model::select_schedule() [date]:2019-05-01
+[2019-09-17 10:17:47] model::query() sql 
+SELECT sid,text,DATE_FORMAT(reg_date,'%H:%i') as time
+FROM userschedule
+WHERE reg_date LIKE '2019-05-01%'
+AND status = 0
+ORDER BY reg_date
+[2019-09-17 10:17:47] controller:: [schedule]
+[2019-09-17 10:17:47] model::select_schedule() [date]:2019-05
+[2019-09-17 10:17:47] model::query() sql 
+SELECT DATE_FORMAT(reg_date,'%Y-%m-%d') as sch
+FROM userschedule
+WHERE reg_date LIKE '2019-05%'
+AND status = 0
+GROUP BY DATE_FORMAT(reg_date,'%Y-%m-%d')
+[2019-09-17 10:17:47] controller:: [month_schedule]
+[2019-09-17 10:17:47] calender::create_calender [year] : 2019 [month] :05 [day] :01
+[2019-09-17 10:17:47] calender::create_calender [firstDate] : 2019-05-01
+[2019-09-17 10:17:47] calender::create_calender [firstWeek] : 3 [week] : 水
+[2019-09-17 10:17:47] calender::create_calender [lastDate] : 2019-05-31
+[2019-09-17 10:17:47] calender::create_calender [lastWeek] : 5 [week] : 金
+[2019-09-17 10:17:47] calender::create_calender [rd] : 2019-04-30
+[2019-09-17 10:17:47] calender::create_calender [ad] : 2019-06-01
+[2019-09-17 10:17:47] calender::create_calender [calender_count] : 31
+[2019-09-17 10:17:47] calender::create_calender [st] : -4 days
+[2019-09-17 10:17:47] calender::create_calender [backday] : 2019-04-28
+[2019-09-17 10:17:47] calender::create_calender [day] : 28
+[2019-09-17 10:17:47] calender::create_calender [backday] : 2019-04-29
+[2019-09-17 10:17:47] calender::create_calender [day] : 29
+[2019-09-17 10:17:47] calender::create_calender [backday] : 2019-04-30
+[2019-09-17 10:17:47] calender::create_calender [day] : 30
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-01 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-02 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-03 [weekday] : Fri [holiday] : 憲法記念日
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-04 [weekday] : Sat [holiday] : みどりの日
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-05 [weekday] : Sun [holiday] : こどもの日
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-06 [weekday] : Mon [holiday] : 振替休日
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-07 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-08 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-09 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-10 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-11 [weekday] : Sat [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-12 [weekday] : Sun [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-13 [weekday] : Mon [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-14 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-15 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-16 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-17 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-18 [weekday] : Sat [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-19 [weekday] : Sun [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-20 [weekday] : Mon [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-21 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-22 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-23 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-24 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-25 [weekday] : Sat [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-26 [weekday] : Sun [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-27 [weekday] : Mon [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-28 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-29 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-30 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [date] : 2019-05-31 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:47] calender::create_calender [nextday] : 2019-06-01
+[2019-09-17 10:17:47] calender::create_calender [day] : 1
+[2019-09-17 10:17:47] controller:: [holiday] : 
+[2019-09-17 10:17:47] controller:: [color] : #6c2463
+[2019-09-17 10:17:47] ======== end puroguramu ========
+[2019-09-17 10:17:50] ======== start puroguramu ========
+[2019-09-17 10:17:50] controller:: GET : 
+Array
+(
+    [date] => 2019-04-30
+)
+[2019-09-17 10:17:50] controller:: POST: 
+[2019-09-17 10:17:50] controller:: [select date] : 2019-04-30
+[2019-09-17 10:17:50] controller:: [year] : 2019 [month] : 04 [gengo] : 平成31年
+[2019-09-17 10:17:50] model::select_schedule() [date]:2019-04-30
+[2019-09-17 10:17:50] model::query() sql 
+SELECT sid,text,DATE_FORMAT(reg_date,'%H:%i') as time
+FROM userschedule
+WHERE reg_date LIKE '2019-04-30%'
+AND status = 0
+ORDER BY reg_date
+[2019-09-17 10:17:50] controller:: [schedule]
+[2019-09-17 10:17:50] model::select_schedule() [date]:2019-04
+[2019-09-17 10:17:50] model::query() sql 
+SELECT DATE_FORMAT(reg_date,'%Y-%m-%d') as sch
+FROM userschedule
+WHERE reg_date LIKE '2019-04%'
+AND status = 0
+GROUP BY DATE_FORMAT(reg_date,'%Y-%m-%d')
+[2019-09-17 10:17:50] controller:: [month_schedule]
+[2019-09-17 10:17:50] calender::create_calender [year] : 2019 [month] :04 [day] :30
+[2019-09-17 10:17:50] calender::create_calender [firstDate] : 2019-04-01
+[2019-09-17 10:17:50] calender::create_calender [firstWeek] : 1 [week] : 月
+[2019-09-17 10:17:50] calender::create_calender [lastDate] : 2019-04-30
+[2019-09-17 10:17:50] calender::create_calender [lastWeek] : 2 [week] : 火
+[2019-09-17 10:17:50] calender::create_calender [rd] : 2019-03-31
+[2019-09-17 10:17:50] calender::create_calender [ad] : 2019-05-01
+[2019-09-17 10:17:50] calender::create_calender [calender_count] : 30
+[2019-09-17 10:17:50] calender::create_calender [st] : -2 days
+[2019-09-17 10:17:50] calender::create_calender [backday] : 2019-03-31
+[2019-09-17 10:17:50] calender::create_calender [day] : 31
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-01 [weekday] : Mon [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-02 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-03 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-04 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-05 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-06 [weekday] : Sat [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-07 [weekday] : Sun [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-08 [weekday] : Mon [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-09 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-10 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-11 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-12 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-13 [weekday] : Sat [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-14 [weekday] : Sun [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-15 [weekday] : Mon [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-16 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-17 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-18 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-19 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-20 [weekday] : Sat [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-21 [weekday] : Sun [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-22 [weekday] : Mon [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-23 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-24 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-25 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-26 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-27 [weekday] : Sat [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-28 [weekday] : Sun [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-29 [weekday] : Mon [holiday] : 昭和の日
+[2019-09-17 10:17:50] calender::create_calender [date] : 2019-04-30 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:50] calender::create_calender [nextday] : 2019-05-01
+[2019-09-17 10:17:50] calender::create_calender [day] : 1
+[2019-09-17 10:17:50] calender::create_calender [nextday] : 2019-05-02
+[2019-09-17 10:17:50] calender::create_calender [day] : 2
+[2019-09-17 10:17:50] calender::create_calender [nextday] : 2019-05-03
+[2019-09-17 10:17:50] calender::create_calender [day] : 3
+[2019-09-17 10:17:50] calender::create_calender [nextday] : 2019-05-04
+[2019-09-17 10:17:50] calender::create_calender [day] : 4
+[2019-09-17 10:17:50] controller:: [holiday] : 
+[2019-09-17 10:17:50] controller:: [color] : #c89933
+[2019-09-17 10:17:50] ======== end puroguramu ========
+[2019-09-17 10:17:52] ======== start puroguramu ========
+[2019-09-17 10:17:52] controller:: GET : 
+Array
+(
+    [date] => 2019-05-01
+)
+[2019-09-17 10:17:52] controller:: POST: 
+[2019-09-17 10:17:52] controller:: [select date] : 2019-05-01
+[2019-09-17 10:17:52] controller:: [year] : 2019 [month] : 05 [gengo] : 平成31年
+[2019-09-17 10:17:52] model::select_schedule() [date]:2019-05-01
+[2019-09-17 10:17:52] model::query() sql 
+SELECT sid,text,DATE_FORMAT(reg_date,'%H:%i') as time
+FROM userschedule
+WHERE reg_date LIKE '2019-05-01%'
+AND status = 0
+ORDER BY reg_date
+[2019-09-17 10:17:52] controller:: [schedule]
+[2019-09-17 10:17:52] model::select_schedule() [date]:2019-05
+[2019-09-17 10:17:52] model::query() sql 
+SELECT DATE_FORMAT(reg_date,'%Y-%m-%d') as sch
+FROM userschedule
+WHERE reg_date LIKE '2019-05%'
+AND status = 0
+GROUP BY DATE_FORMAT(reg_date,'%Y-%m-%d')
+[2019-09-17 10:17:52] controller:: [month_schedule]
+[2019-09-17 10:17:52] calender::create_calender [year] : 2019 [month] :05 [day] :01
+[2019-09-17 10:17:52] calender::create_calender [firstDate] : 2019-05-01
+[2019-09-17 10:17:52] calender::create_calender [firstWeek] : 3 [week] : 水
+[2019-09-17 10:17:52] calender::create_calender [lastDate] : 2019-05-31
+[2019-09-17 10:17:52] calender::create_calender [lastWeek] : 5 [week] : 金
+[2019-09-17 10:17:52] calender::create_calender [rd] : 2019-04-30
+[2019-09-17 10:17:52] calender::create_calender [ad] : 2019-06-01
+[2019-09-17 10:17:52] calender::create_calender [calender_count] : 31
+[2019-09-17 10:17:52] calender::create_calender [st] : -4 days
+[2019-09-17 10:17:52] calender::create_calender [backday] : 2019-04-28
+[2019-09-17 10:17:52] calender::create_calender [day] : 28
+[2019-09-17 10:17:52] calender::create_calender [backday] : 2019-04-29
+[2019-09-17 10:17:52] calender::create_calender [day] : 29
+[2019-09-17 10:17:52] calender::create_calender [backday] : 2019-04-30
+[2019-09-17 10:17:52] calender::create_calender [day] : 30
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-01 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-02 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-03 [weekday] : Fri [holiday] : 憲法記念日
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-04 [weekday] : Sat [holiday] : みどりの日
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-05 [weekday] : Sun [holiday] : こどもの日
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-06 [weekday] : Mon [holiday] : 振替休日
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-07 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-08 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-09 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-10 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-11 [weekday] : Sat [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-12 [weekday] : Sun [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-13 [weekday] : Mon [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-14 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-15 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-16 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-17 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-18 [weekday] : Sat [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-19 [weekday] : Sun [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-20 [weekday] : Mon [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-21 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-22 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-23 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-24 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-25 [weekday] : Sat [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-26 [weekday] : Sun [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-27 [weekday] : Mon [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-28 [weekday] : Tue [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-29 [weekday] : Wed [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-30 [weekday] : Thu [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [date] : 2019-05-31 [weekday] : Fri [holiday] : 
+[2019-09-17 10:17:52] calender::create_calender [nextday] : 2019-06-01
+[2019-09-17 10:17:52] calender::create_calender [day] : 1
+[2019-09-17 10:17:52] controller:: [holiday] : 
+[2019-09-17 10:17:52] controller:: [color] : #6c2463
+[2019-09-17 10:17:52] ======== end puroguramu ========
+[2019-09-17 10:19:33] ======== start puroguramu ========
+[2019-09-17 10:19:33] controller:: GET : 
+Array
+(
+    [date] => 2019-05-01
+)
+[2019-09-17 10:19:33] controller:: POST: 
+[2019-09-17 10:19:33] controller:: [select date] : 2019-05-01
+[2019-09-17 10:19:33] controller:: [year] : 2019 [month] : 05 [gengo] : 平成31年
+[2019-09-17 10:19:33] model::select_schedule() [date]:2019-05-01
+[2019-09-17 10:19:33] model::query() sql 
+SELECT sid,text,DATE_FORMAT(reg_date,'%H:%i') as time
+FROM userschedule
+WHERE reg_date LIKE '2019-05-01%'
+AND status = 0
+ORDER BY reg_date
+[2019-09-17 10:19:33] controller:: [schedule]
+[2019-09-17 10:19:33] model::select_schedule() [date]:2019-05
+[2019-09-17 10:19:33] model::query() sql 
+SELECT DATE_FORMAT(reg_date,'%Y-%m-%d') as sch
+FROM userschedule
+WHERE reg_date LIKE '2019-05%'
+AND status = 0
+GROUP BY DATE_FORMAT(reg_date,'%Y-%m-%d')
+[2019-09-17 10:19:33] controller:: [month_schedule]
+[2019-09-17 10:19:33] calender::create_calender [year] : 2019 [month] :05 [day] :01
+[2019-09-17 10:19:33] calender::create_calender [firstDate] : 2019-05-01
+[2019-09-17 10:19:33] calender::create_calender [firstWeek] : 3 [week] : 水
+[2019-09-17 10:19:33] calender::create_calender [lastDate] : 2019-05-31
+[2019-09-17 10:19:33] calender::create_calender [lastWeek] : 5 [week] : 金
+[2019-09-17 10:19:33] calender::create_calender [rd] : 2019-04-30
+[2019-09-17 10:19:33] calender::create_calender [ad] : 2019-06-01
+[2019-09-17 10:19:33] calender::create_calender [calender_count] : 31
+[2019-09-17 10:19:33] calender::create_calender [st] : -4 days
+[2019-09-17 10:19:33] calender::create_calender [backday] : 2019-04-28
+[2019-09-17 10:19:33] calender::create_calender [day] : 28
+[2019-09-17 10:19:33] calender::create_calender [backday] : 2019-04-29
+[2019-09-17 10:19:33] calender::create_calender [day] : 29
+[2019-09-17 10:19:33] calender::create_calender [backday] : 2019-04-30
+[2019-09-17 10:19:33] calender::create_calender [day] : 30
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-01 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-02 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-03 [weekday] : Fri [holiday] : 憲法記念日
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-04 [weekday] : Sat [holiday] : みどりの日
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-05 [weekday] : Sun [holiday] : こどもの日
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-06 [weekday] : Mon [holiday] : 振替休日
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-07 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-08 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-09 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-10 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-11 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-12 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-13 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-14 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-15 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-16 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-17 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-18 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-19 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-20 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-21 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-22 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-23 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-24 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-25 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-26 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-27 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-28 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-29 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-30 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [date] : 2019-05-31 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:33] calender::create_calender [nextday] : 2019-06-01
+[2019-09-17 10:19:33] calender::create_calender [day] : 1
+[2019-09-17 10:19:33] controller:: [holiday] : 
+[2019-09-17 10:19:33] controller:: [color] : #6c2463
+[2019-09-17 10:19:33] ======== end puroguramu ========
+[2019-09-17 10:19:36] ======== start puroguramu ========
+[2019-09-17 10:19:36] controller:: GET : 
+Array
+(
+    [date] => 2019-04-30
+)
+[2019-09-17 10:19:36] controller:: POST: 
+[2019-09-17 10:19:36] controller:: [select date] : 2019-04-30
+[2019-09-17 10:19:36] controller:: [year] : 2019 [month] : 04 [gengo] : 平成31年
+[2019-09-17 10:19:36] model::select_schedule() [date]:2019-04-30
+[2019-09-17 10:19:36] model::query() sql 
+SELECT sid,text,DATE_FORMAT(reg_date,'%H:%i') as time
+FROM userschedule
+WHERE reg_date LIKE '2019-04-30%'
+AND status = 0
+ORDER BY reg_date
+[2019-09-17 10:19:36] controller:: [schedule]
+[2019-09-17 10:19:36] model::select_schedule() [date]:2019-04
+[2019-09-17 10:19:36] model::query() sql 
+SELECT DATE_FORMAT(reg_date,'%Y-%m-%d') as sch
+FROM userschedule
+WHERE reg_date LIKE '2019-04%'
+AND status = 0
+GROUP BY DATE_FORMAT(reg_date,'%Y-%m-%d')
+[2019-09-17 10:19:36] controller:: [month_schedule]
+[2019-09-17 10:19:36] calender::create_calender [year] : 2019 [month] :04 [day] :30
+[2019-09-17 10:19:36] calender::create_calender [firstDate] : 2019-04-01
+[2019-09-17 10:19:36] calender::create_calender [firstWeek] : 1 [week] : 月
+[2019-09-17 10:19:36] calender::create_calender [lastDate] : 2019-04-30
+[2019-09-17 10:19:36] calender::create_calender [lastWeek] : 2 [week] : 火
+[2019-09-17 10:19:36] calender::create_calender [rd] : 2019-03-31
+[2019-09-17 10:19:36] calender::create_calender [ad] : 2019-05-01
+[2019-09-17 10:19:36] calender::create_calender [calender_count] : 30
+[2019-09-17 10:19:36] calender::create_calender [st] : -2 days
+[2019-09-17 10:19:36] calender::create_calender [backday] : 2019-03-31
+[2019-09-17 10:19:36] calender::create_calender [day] : 31
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-01 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-02 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-03 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-04 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-05 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-06 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-07 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-08 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-09 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-10 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-11 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-12 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-13 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-14 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-15 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-16 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-17 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-18 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-19 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-20 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-21 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-22 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-23 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-24 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-25 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-26 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-27 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-28 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-29 [weekday] : Mon [holiday] : 昭和の日
+[2019-09-17 10:19:36] calender::create_calender [date] : 2019-04-30 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:36] calender::create_calender [nextday] : 2019-05-01
+[2019-09-17 10:19:36] calender::create_calender [day] : 1
+[2019-09-17 10:19:36] calender::create_calender [nextday] : 2019-05-02
+[2019-09-17 10:19:36] calender::create_calender [day] : 2
+[2019-09-17 10:19:36] calender::create_calender [nextday] : 2019-05-03
+[2019-09-17 10:19:36] calender::create_calender [day] : 3
+[2019-09-17 10:19:36] calender::create_calender [nextday] : 2019-05-04
+[2019-09-17 10:19:36] calender::create_calender [day] : 4
+[2019-09-17 10:19:36] controller:: [holiday] : 
+[2019-09-17 10:19:36] controller:: [color] : #c89933
+[2019-09-17 10:19:36] ======== end puroguramu ========
+[2019-09-17 10:19:37] ======== start puroguramu ========
+[2019-09-17 10:19:37] controller:: GET : 
+Array
+(
+    [date] => 2019-03-31
+)
+[2019-09-17 10:19:37] controller:: POST: 
+[2019-09-17 10:19:37] controller:: [select date] : 2019-03-31
+[2019-09-17 10:19:37] controller:: [year] : 2019 [month] : 03 [gengo] : 平成31年
+[2019-09-17 10:19:37] model::select_schedule() [date]:2019-03-31
+[2019-09-17 10:19:37] model::query() sql 
+SELECT sid,text,DATE_FORMAT(reg_date,'%H:%i') as time
+FROM userschedule
+WHERE reg_date LIKE '2019-03-31%'
+AND status = 0
+ORDER BY reg_date
+[2019-09-17 10:19:37] controller:: [schedule]
+[2019-09-17 10:19:37] model::select_schedule() [date]:2019-03
+[2019-09-17 10:19:37] model::query() sql 
+SELECT DATE_FORMAT(reg_date,'%Y-%m-%d') as sch
+FROM userschedule
+WHERE reg_date LIKE '2019-03%'
+AND status = 0
+GROUP BY DATE_FORMAT(reg_date,'%Y-%m-%d')
+[2019-09-17 10:19:37] controller:: [month_schedule]
+[2019-09-17 10:19:37] calender::create_calender [year] : 2019 [month] :03 [day] :31
+[2019-09-17 10:19:37] calender::create_calender [firstDate] : 2019-03-01
+[2019-09-17 10:19:37] calender::create_calender [firstWeek] : 5 [week] : 金
+[2019-09-17 10:19:37] calender::create_calender [lastDate] : 2019-03-31
+[2019-09-17 10:19:37] calender::create_calender [lastWeek] : 0 [week] : 日
+[2019-09-17 10:19:37] calender::create_calender [rd] : 2019-02-28
+[2019-09-17 10:19:37] calender::create_calender [ad] : 2019-04-01
+[2019-09-17 10:19:37] calender::create_calender [calender_count] : 31
+[2019-09-17 10:19:37] calender::create_calender [st] : -6 days
+[2019-09-17 10:19:37] calender::create_calender [backday] : 2019-02-24
+[2019-09-17 10:19:37] calender::create_calender [day] : 24
+[2019-09-17 10:19:37] calender::create_calender [backday] : 2019-02-25
+[2019-09-17 10:19:37] calender::create_calender [day] : 25
+[2019-09-17 10:19:37] calender::create_calender [backday] : 2019-02-26
+[2019-09-17 10:19:37] calender::create_calender [day] : 26
+[2019-09-17 10:19:37] calender::create_calender [backday] : 2019-02-27
+[2019-09-17 10:19:37] calender::create_calender [day] : 27
+[2019-09-17 10:19:37] calender::create_calender [backday] : 2019-02-28
+[2019-09-17 10:19:37] calender::create_calender [day] : 28
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-01 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-02 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-03 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-04 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-05 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-06 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-07 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-08 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-09 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-10 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-11 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-12 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-13 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-14 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-15 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-16 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-17 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-18 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-19 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-20 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-21 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-22 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-23 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-24 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-25 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-26 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-27 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-28 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-29 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-30 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-31 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [nextday] : 2019-04-01
+[2019-09-17 10:19:37] calender::create_calender [day] : 1
+[2019-09-17 10:19:37] calender::create_calender [nextday] : 2019-04-02
+[2019-09-17 10:19:37] calender::create_calender [day] : 2
+[2019-09-17 10:19:37] calender::create_calender [nextday] : 2019-04-03
+[2019-09-17 10:19:37] calender::create_calender [day] : 3
+[2019-09-17 10:19:37] calender::create_calender [nextday] : 2019-04-04
+[2019-09-17 10:19:37] calender::create_calender [day] : 4
+[2019-09-17 10:19:37] calender::create_calender [nextday] : 2019-04-05
+[2019-09-17 10:19:37] calender::create_calender [day] : 5
+[2019-09-17 10:19:37] calender::create_calender [nextday] : 2019-04-06
+[2019-09-17 10:19:37] calender::create_calender [day] : 6
+[2019-09-17 10:19:37] controller:: [holiday] : 
+[2019-09-17 10:19:37] controller:: [color] : #f5d1db
+[2019-09-17 10:19:37] ======== end puroguramu ========
+[2019-09-17 10:19:37] ======== start puroguramu ========
+[2019-09-17 10:19:37] controller:: GET : 
+Array
+(
+    [date] => 2019-03-31
+)
+[2019-09-17 10:19:37] controller:: POST: 
+[2019-09-17 10:19:37] controller:: [select date] : 2019-03-31
+[2019-09-17 10:19:37] controller:: [year] : 2019 [month] : 03 [gengo] : 平成31年
+[2019-09-17 10:19:37] model::select_schedule() [date]:2019-03-31
+[2019-09-17 10:19:37] model::query() sql 
+SELECT sid,text,DATE_FORMAT(reg_date,'%H:%i') as time
+FROM userschedule
+WHERE reg_date LIKE '2019-03-31%'
+AND status = 0
+ORDER BY reg_date
+[2019-09-17 10:19:37] controller:: [schedule]
+[2019-09-17 10:19:37] model::select_schedule() [date]:2019-03
+[2019-09-17 10:19:37] model::query() sql 
+SELECT DATE_FORMAT(reg_date,'%Y-%m-%d') as sch
+FROM userschedule
+WHERE reg_date LIKE '2019-03%'
+AND status = 0
+GROUP BY DATE_FORMAT(reg_date,'%Y-%m-%d')
+[2019-09-17 10:19:37] controller:: [month_schedule]
+[2019-09-17 10:19:37] calender::create_calender [year] : 2019 [month] :03 [day] :31
+[2019-09-17 10:19:37] calender::create_calender [firstDate] : 2019-03-01
+[2019-09-17 10:19:37] calender::create_calender [firstWeek] : 5 [week] : 金
+[2019-09-17 10:19:37] calender::create_calender [lastDate] : 2019-03-31
+[2019-09-17 10:19:37] calender::create_calender [lastWeek] : 0 [week] : 日
+[2019-09-17 10:19:37] calender::create_calender [rd] : 2019-02-28
+[2019-09-17 10:19:37] calender::create_calender [ad] : 2019-04-01
+[2019-09-17 10:19:37] calender::create_calender [calender_count] : 31
+[2019-09-17 10:19:37] calender::create_calender [st] : -6 days
+[2019-09-17 10:19:37] calender::create_calender [backday] : 2019-02-24
+[2019-09-17 10:19:37] calender::create_calender [day] : 24
+[2019-09-17 10:19:37] calender::create_calender [backday] : 2019-02-25
+[2019-09-17 10:19:37] calender::create_calender [day] : 25
+[2019-09-17 10:19:37] calender::create_calender [backday] : 2019-02-26
+[2019-09-17 10:19:37] calender::create_calender [day] : 26
+[2019-09-17 10:19:37] calender::create_calender [backday] : 2019-02-27
+[2019-09-17 10:19:37] calender::create_calender [day] : 27
+[2019-09-17 10:19:37] calender::create_calender [backday] : 2019-02-28
+[2019-09-17 10:19:37] calender::create_calender [day] : 28
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-01 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-02 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-03 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-04 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-05 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-06 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-07 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-08 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-09 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-10 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-11 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-12 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-13 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-14 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-15 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-16 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-17 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-18 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-19 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-20 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-21 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-22 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-23 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-24 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-25 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-26 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-27 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-28 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-29 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-30 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-03-31 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [nextday] : 2019-04-01
+[2019-09-17 10:19:37] calender::create_calender [day] : 1
+[2019-09-17 10:19:37] calender::create_calender [nextday] : 2019-04-02
+[2019-09-17 10:19:37] calender::create_calender [day] : 2
+[2019-09-17 10:19:37] calender::create_calender [nextday] : 2019-04-03
+[2019-09-17 10:19:37] calender::create_calender [day] : 3
+[2019-09-17 10:19:37] calender::create_calender [nextday] : 2019-04-04
+[2019-09-17 10:19:37] calender::create_calender [day] : 4
+[2019-09-17 10:19:37] calender::create_calender [nextday] : 2019-04-05
+[2019-09-17 10:19:37] calender::create_calender [day] : 5
+[2019-09-17 10:19:37] calender::create_calender [nextday] : 2019-04-06
+[2019-09-17 10:19:37] calender::create_calender [day] : 6
+[2019-09-17 10:19:37] controller:: [holiday] : 
+[2019-09-17 10:19:37] controller:: [color] : #f5d1db
+[2019-09-17 10:19:37] ======== end puroguramu ========
+[2019-09-17 10:19:37] ======== start puroguramu ========
+[2019-09-17 10:19:37] controller:: GET : 
+Array
+(
+    [date] => 2019-02-28
+)
+[2019-09-17 10:19:37] controller:: POST: 
+[2019-09-17 10:19:37] controller:: [select date] : 2019-02-28
+[2019-09-17 10:19:37] controller:: [year] : 2019 [month] : 02 [gengo] : 平成31年
+[2019-09-17 10:19:37] model::select_schedule() [date]:2019-02-28
+[2019-09-17 10:19:37] model::query() sql 
+SELECT sid,text,DATE_FORMAT(reg_date,'%H:%i') as time
+FROM userschedule
+WHERE reg_date LIKE '2019-02-28%'
+AND status = 0
+ORDER BY reg_date
+[2019-09-17 10:19:37] controller:: [schedule]
+[2019-09-17 10:19:37] model::select_schedule() [date]:2019-02
+[2019-09-17 10:19:37] model::query() sql 
+SELECT DATE_FORMAT(reg_date,'%Y-%m-%d') as sch
+FROM userschedule
+WHERE reg_date LIKE '2019-02%'
+AND status = 0
+GROUP BY DATE_FORMAT(reg_date,'%Y-%m-%d')
+[2019-09-17 10:19:37] controller:: [month_schedule]
+[2019-09-17 10:19:37] calender::create_calender [year] : 2019 [month] :02 [day] :28
+[2019-09-17 10:19:37] calender::create_calender [firstDate] : 2019-02-01
+[2019-09-17 10:19:37] calender::create_calender [firstWeek] : 5 [week] : 金
+[2019-09-17 10:19:37] calender::create_calender [lastDate] : 2019-02-28
+[2019-09-17 10:19:37] calender::create_calender [lastWeek] : 4 [week] : 木
+[2019-09-17 10:19:37] calender::create_calender [rd] : 2019-01-31
+[2019-09-17 10:19:37] calender::create_calender [ad] : 2019-03-01
+[2019-09-17 10:19:37] calender::create_calender [calender_count] : 28
+[2019-09-17 10:19:37] calender::create_calender [st] : -6 days
+[2019-09-17 10:19:37] calender::create_calender [backday] : 2019-01-27
+[2019-09-17 10:19:37] calender::create_calender [day] : 27
+[2019-09-17 10:19:37] calender::create_calender [backday] : 2019-01-28
+[2019-09-17 10:19:37] calender::create_calender [day] : 28
+[2019-09-17 10:19:37] calender::create_calender [backday] : 2019-01-29
+[2019-09-17 10:19:37] calender::create_calender [day] : 29
+[2019-09-17 10:19:37] calender::create_calender [backday] : 2019-01-30
+[2019-09-17 10:19:37] calender::create_calender [day] : 30
+[2019-09-17 10:19:37] calender::create_calender [backday] : 2019-01-31
+[2019-09-17 10:19:37] calender::create_calender [day] : 31
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-01 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-02 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-03 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-04 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-05 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-06 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-07 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-08 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-09 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-10 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-11 [weekday] : Mon [holiday] : 建国記念の日
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-12 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-13 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-14 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-15 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-16 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-17 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-18 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-19 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-20 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-21 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-22 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-23 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-24 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-25 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-26 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-27 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [date] : 2019-02-28 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:37] calender::create_calender [nextday] : 2019-03-01
+[2019-09-17 10:19:37] calender::create_calender [day] : 1
+[2019-09-17 10:19:37] calender::create_calender [nextday] : 2019-03-02
+[2019-09-17 10:19:37] calender::create_calender [day] : 2
+[2019-09-17 10:19:37] controller:: [holiday] : 
+[2019-09-17 10:19:37] controller:: [color] : #c3d825
+[2019-09-17 10:19:37] ======== end puroguramu ========
+[2019-09-17 10:19:48] ======== start puroguramu ========
+[2019-09-17 10:19:48] controller:: GET : 
+Array
+(
+    [date] => 2019-02-28
+)
+[2019-09-17 10:19:48] controller:: POST: 
+[2019-09-17 10:19:48] controller:: [select date] : 2019-02-28
+[2019-09-17 10:19:48] controller:: [year] : 2019 [month] : 02 [gengo] : 平成31年
+[2019-09-17 10:19:48] model::select_schedule() [date]:2019-02-28
+[2019-09-17 10:19:48] model::query() sql 
+SELECT sid,text,DATE_FORMAT(reg_date,'%H:%i') as time
+FROM userschedule
+WHERE reg_date LIKE '2019-02-28%'
+AND status = 0
+ORDER BY reg_date
+[2019-09-17 10:19:48] controller:: [schedule]
+[2019-09-17 10:19:48] model::select_schedule() [date]:2019-02
+[2019-09-17 10:19:48] model::query() sql 
+SELECT DATE_FORMAT(reg_date,'%Y-%m-%d') as sch
+FROM userschedule
+WHERE reg_date LIKE '2019-02%'
+AND status = 0
+GROUP BY DATE_FORMAT(reg_date,'%Y-%m-%d')
+[2019-09-17 10:19:48] controller:: [month_schedule]
+[2019-09-17 10:19:48] calender::create_calender [year] : 2019 [month] :02 [day] :28
+[2019-09-17 10:19:48] calender::create_calender [firstDate] : 2019-02-01
+[2019-09-17 10:19:48] calender::create_calender [firstWeek] : 5 [week] : 金
+[2019-09-17 10:19:48] calender::create_calender [lastDate] : 2019-02-28
+[2019-09-17 10:19:48] calender::create_calender [lastWeek] : 4 [week] : 木
+[2019-09-17 10:19:48] calender::create_calender [rd] : 2019-01-31
+[2019-09-17 10:19:48] calender::create_calender [ad] : 2019-03-01
+[2019-09-17 10:19:48] calender::create_calender [calender_count] : 28
+[2019-09-17 10:19:48] calender::create_calender [st] : -6 days
+[2019-09-17 10:19:48] calender::create_calender [backday] : 2019-01-27
+[2019-09-17 10:19:48] calender::create_calender [day] : 27
+[2019-09-17 10:19:48] calender::create_calender [backday] : 2019-01-28
+[2019-09-17 10:19:48] calender::create_calender [day] : 28
+[2019-09-17 10:19:48] calender::create_calender [backday] : 2019-01-29
+[2019-09-17 10:19:48] calender::create_calender [day] : 29
+[2019-09-17 10:19:48] calender::create_calender [backday] : 2019-01-30
+[2019-09-17 10:19:48] calender::create_calender [day] : 30
+[2019-09-17 10:19:48] calender::create_calender [backday] : 2019-01-31
+[2019-09-17 10:19:48] calender::create_calender [day] : 31
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-01 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-02 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-03 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-04 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-05 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-06 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-07 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-08 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-09 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-10 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-11 [weekday] : Mon [holiday] : 建国記念の日
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-12 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-13 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-14 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-15 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-16 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-17 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-18 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-19 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-20 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-21 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-22 [weekday] : Fri [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-23 [weekday] : Sat [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-24 [weekday] : Sun [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-25 [weekday] : Mon [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-26 [weekday] : Tue [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-27 [weekday] : Wed [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [date] : 2019-02-28 [weekday] : Thu [holiday] : 
+[2019-09-17 10:19:48] calender::create_calender [nextday] : 2019-03-01
+[2019-09-17 10:19:48] calender::create_calender [day] : 1
+[2019-09-17 10:19:48] calender::create_calender [nextday] : 2019-03-02
+[2019-09-17 10:19:48] calender::create_calender [day] : 2
+[2019-09-17 10:19:48] controller:: [holiday] : 
+[2019-09-17 10:19:48] controller:: [color] : #c3d825
+[2019-09-17 10:19:48] ======== end puroguramu ========
+[2019-09-17 10:21:09] ======== start puroguramu ========
+[2019-09-17 10:21:09] controller:: GET : 
+Array
+(
+    [date] => 2019-02-28
+)
+[2019-09-17 10:21:09] controller:: POST: 
+[2019-09-17 10:21:09] controller:: [select date] : 2019-02-28
+[2019-09-17 10:21:09] controller:: [year] : 2019 [month] : 02 [gengo] : 平成31年
+[2019-09-17 10:21:09] model::select_schedule() [date]:2019-02-28
+[2019-09-17 10:21:09] model::query() sql 
+SELECT sid,text,DATE_FORMAT(reg_date,'%H:%i') as time
+FROM userschedule
+WHERE reg_date LIKE '2019-02-28%'
+AND status = 0
+ORDER BY reg_date
+[2019-09-17 10:21:09] controller:: [schedule]
+[2019-09-17 10:21:09] model::select_schedule() [date]:2019-02
+[2019-09-17 10:21:09] model::query() sql 
+SELECT DATE_FORMAT(reg_date,'%Y-%m-%d') as sch
+FROM userschedule
+WHERE reg_date LIKE '2019-02%'
+AND status = 0
+GROUP BY DATE_FORMAT(reg_date,'%Y-%m-%d')
+[2019-09-17 10:21:09] controller:: [month_schedule]
+[2019-09-17 10:21:09] calender::create_calender [year] : 2019 [month] :02 [day] :28
+[2019-09-17 10:21:09] calender::create_calender [firstDate] : 2019-02-01
+[2019-09-17 10:21:09] calender::create_calender [firstWeek] : 5 [week] : 金
+[2019-09-17 10:21:09] calender::create_calender [lastDate] : 2019-02-28
+[2019-09-17 10:21:09] calender::create_calender [lastWeek] : 4 [week] : 木
+[2019-09-17 10:21:09] calender::create_calender [rd] : 2019-01-31
+[2019-09-17 10:21:09] calender::create_calender [ad] : 2019-03-01
+[2019-09-17 10:21:09] calender::create_calender [calender_count] : 28
+[2019-09-17 10:21:09] calender::create_calender [st] : -6 days
+[2019-09-17 10:21:09] calender::create_calender [backday] : 2019-01-27
+[2019-09-17 10:21:09] calender::create_calender [day] : 27
+[2019-09-17 10:21:09] calender::create_calender [backday] : 2019-01-28
+[2019-09-17 10:21:09] calender::create_calender [day] : 28
+[2019-09-17 10:21:09] calender::create_calender [backday] : 2019-01-29
+[2019-09-17 10:21:09] calender::create_calender [day] : 29
+[2019-09-17 10:21:09] calender::create_calender [backday] : 2019-01-30
+[2019-09-17 10:21:09] calender::create_calender [day] : 30
+[2019-09-17 10:21:09] calender::create_calender [backday] : 2019-01-31
+[2019-09-17 10:21:09] calender::create_calender [day] : 31
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-01 [weekday] : Fri [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-02 [weekday] : Sat [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-03 [weekday] : Sun [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-04 [weekday] : Mon [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-05 [weekday] : Tue [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-06 [weekday] : Wed [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-07 [weekday] : Thu [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-08 [weekday] : Fri [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-09 [weekday] : Sat [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-10 [weekday] : Sun [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-11 [weekday] : Mon [holiday] : 建国記念の日
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-12 [weekday] : Tue [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-13 [weekday] : Wed [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-14 [weekday] : Thu [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-15 [weekday] : Fri [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-16 [weekday] : Sat [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-17 [weekday] : Sun [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-18 [weekday] : Mon [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-19 [weekday] : Tue [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-20 [weekday] : Wed [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-21 [weekday] : Thu [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-22 [weekday] : Fri [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-23 [weekday] : Sat [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-24 [weekday] : Sun [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-25 [weekday] : Mon [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-26 [weekday] : Tue [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-27 [weekday] : Wed [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [date] : 2019-02-28 [weekday] : Thu [holiday] : 
+[2019-09-17 10:21:09] calender::create_calender [nextday] : 2019-03-01
+[2019-09-17 10:21:09] calender::create_calender [day] : 1
+[2019-09-17 10:21:09] calender::create_calender [nextday] : 2019-03-02
+[2019-09-17 10:21:09] calender::create_calender [day] : 2
+[2019-09-17 10:21:09] controller:: [holiday] : 
+[2019-09-17 10:21:09] controller:: [color] : #c3d825
+[2019-09-17 10:21:09] ======== end puroguramu ========
+[2019-09-17 10:21:15] ======== start puroguramu ========
+[2019-09-17 10:21:15] controller:: GET : 
+Array
+(
+    [date] => 2019-03-01
+)
+[2019-09-17 10:21:15] controller:: POST: 
+[2019-09-17 10:21:15] controller:: [select date] : 2019-03-01
+[2019-09-17 10:21:15] controller:: [year] : 2019 [month] : 03 [gengo] : 平成31年
+[2019-09-17 10:21:15] model::select_schedule() [date]:2019-03-01
+[2019-09-17 10:21:15] model::query() sql 
+SELECT sid,text,DATE_FORMAT(reg_date,'%H:%i') as time
+FROM userschedule
+WHERE reg_date LIKE '2019-03-01%'
+AND status = 0
+ORDER BY reg_date
+[2019-09-17 10:21:15] controller:: [schedule]
+[2019-09-17 10:21:15] model::select_schedule() [date]:2019-03
+[2019-09-17 10:21:15] model::query() sql 
+SELECT DATE_FORMAT(reg_date,'%Y-%m-%d') as sch
+FROM userschedule
+WHERE reg_date LIKE '2019-03%'
+AND status = 0
+GROUP BY DATE_FORMAT(reg_date,'%Y-%m-%d')
+[2019-09-17 10:21:15] controller:: [month_schedule]
+[2019-09-17 10:21:15] calender::create_calender [year] : 2019 [month] :03 [day] :01
+[2019-09-17 10:21:15] calender::create_calender [firstDate] : 2019-03-01
+[2019-09-17 10:21:15] calender::create_calender [firstWeek] : 5 [week] : 金
+[2019-09-17 10:21:15] calender::create_calender [lastDate] : 2019-03-31
+[2019-09-17 10:21:15] calender::create_calender [lastWeek] : 0 [week] : 日
+[2019-09-17 10:21:15] calender::create_calender [rd] : 2019-02-28
+[2019-09-17 10:21:15] calender::create_calender [ad] : 2019-04-01
+[2019-09-17 10:21:15] calender::create_calender [calender_count] : 31
+[2019-09-17 10:21:15] calender::create_calender [st] : -6 days
+[2019-09-17 10:21:15] calender::create_calender [backday] : 2019-02-24
+[2019-09-17 10:21:15] calender::create_calender [day] : 24
+[2019-09-17 10:21:15] calender::create_calender [backday] : 2019-02-25
+[2019-09-17 10:21:15] calender::create_calender [day] : 25
+[2019-09-17 10:21:15] calender::create_calender [backday] : 2019-02-26
+[2019-09-17 10:21:15] calender::create_calender [day] : 26
+[2019-09-17 10:21:15] calender::create_calender [backday] : 2019-02-27
+[2019-09-17 10:21:15] calender::create_calender [day] : 27
+[2019-09-17 10:21:15] calender::create_calender [backday] : 2019-02-28
+[2019-09-17 10:21:15] calender::create_calender [day] : 28
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-01 [weekday] : Fri [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-02 [weekday] : Sat [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-03 [weekday] : Sun [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-04 [weekday] : Mon [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-05 [weekday] : Tue [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-06 [weekday] : Wed [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-07 [weekday] : Thu [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-08 [weekday] : Fri [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-09 [weekday] : Sat [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-10 [weekday] : Sun [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-11 [weekday] : Mon [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-12 [weekday] : Tue [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-13 [weekday] : Wed [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-14 [weekday] : Thu [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-15 [weekday] : Fri [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-16 [weekday] : Sat [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-17 [weekday] : Sun [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-18 [weekday] : Mon [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-19 [weekday] : Tue [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-20 [weekday] : Wed [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-21 [weekday] : Thu [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-22 [weekday] : Fri [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-23 [weekday] : Sat [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-24 [weekday] : Sun [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-25 [weekday] : Mon [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-26 [weekday] : Tue [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-27 [weekday] : Wed [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-28 [weekday] : Thu [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-29 [weekday] : Fri [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-30 [weekday] : Sat [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [date] : 2019-03-31 [weekday] : Sun [holiday] : 
+[2019-09-17 10:21:15] calender::create_calender [nextday] : 2019-04-01
+[2019-09-17 10:21:15] calender::create_calender [day] : 1
+[2019-09-17 10:21:15] calender::create_calender [nextday] : 2019-04-02
+[2019-09-17 10:21:15] calender::create_calender [day] : 2
+[2019-09-17 10:21:15] calender::create_calender [nextday] : 2019-04-03
+[2019-09-17 10:21:15] calender::create_calender [day] : 3
+[2019-09-17 10:21:15] calender::create_calender [nextday] : 2019-04-04
+[2019-09-17 10:21:15] calender::create_calender [day] : 4
+[2019-09-17 10:21:15] calender::create_calender [nextday] : 2019-04-05
+[2019-09-17 10:21:15] calender::create_calender [day] : 5
+[2019-09-17 10:21:15] calender::create_calender [nextday] : 2019-04-06
+[2019-09-17 10:21:15] calender::create_calender [day] : 6
+[2019-09-17 10:21:15] controller:: [holiday] : 
+[2019-09-17 10:21:15] controller:: [color] : #f5d1db
+[2019-09-17 10:21:15] ======== end puroguramu ========
+[2019-09-17 10:27:43] ======== start puroguramu ========
+[2019-09-17 10:27:43] controller:: GET : 
+Array
+(
+    [date] => 2019-03-01
+)
+[2019-09-17 10:27:43] controller:: POST: 
+[2019-09-17 10:27:43] controller:: [select date] : 2019-03-01
+[2019-09-17 10:27:43] controller:: [year] : 2019 [month] : 03 [gengo] : 平成31年
+[2019-09-17 10:27:43] model::select_schedule() [date]:2019-03-01
+[2019-09-17 10:27:43] model::query() sql 
+SELECT sid,text,DATE_FORMAT(reg_date,'%H:%i') as time
+FROM userschedule
+WHERE reg_date LIKE '2019-03-01%'
+AND status = 0
+ORDER BY reg_date
+[2019-09-17 10:27:43] controller:: [schedule]
+[2019-09-17 10:27:43] model::select_schedule() [date]:2019-03
+[2019-09-17 10:27:43] model::query() sql 
+SELECT DATE_FORMAT(reg_date,'%Y-%m-%d') as sch
+FROM userschedule
+WHERE reg_date LIKE '2019-03%'
+AND status = 0
+GROUP BY DATE_FORMAT(reg_date,'%Y-%m-%d')
+[2019-09-17 10:27:43] controller:: [month_schedule]
+[2019-09-17 10:27:43] calender::create_calender [year] : 2019 [month] :03 [day] :01
+[2019-09-17 10:27:43] calender::create_calender [firstDate] : 2019-03-01
+[2019-09-17 10:27:43] calender::create_calender [firstWeek] : 5 [week] : 金
+[2019-09-17 10:27:43] calender::create_calender [lastDate] : 2019-03-31
+[2019-09-17 10:27:43] calender::create_calender [lastWeek] : 0 [week] : 日
+[2019-09-17 10:27:43] calender::create_calender [rd] : 2019-02-28
+[2019-09-17 10:27:43] calender::create_calender [ad] : 2019-04-01
+[2019-09-17 10:27:43] calender::create_calender [calender_count] : 31
+[2019-09-17 10:27:43] calender::create_calender [st] : -6 days
+[2019-09-17 10:27:43] calender::create_calender [backday] : 2019-02-24
+[2019-09-17 10:27:43] calender::create_calender [day] : 24
+[2019-09-17 10:27:43] calender::create_calender [backday] : 2019-02-25
+[2019-09-17 10:27:43] calender::create_calender [day] : 25
+[2019-09-17 10:27:43] calender::create_calender [backday] : 2019-02-26
+[2019-09-17 10:27:43] calender::create_calender [day] : 26
+[2019-09-17 10:27:43] calender::create_calender [backday] : 2019-02-27
+[2019-09-17 10:27:43] calender::create_calender [day] : 27
+[2019-09-17 10:27:43] calender::create_calender [backday] : 2019-02-28
+[2019-09-17 10:27:43] calender::create_calender [day] : 28
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-01 [weekday] : Fri [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-02 [weekday] : Sat [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-03 [weekday] : Sun [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-04 [weekday] : Mon [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-05 [weekday] : Tue [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-06 [weekday] : Wed [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-07 [weekday] : Thu [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-08 [weekday] : Fri [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-09 [weekday] : Sat [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-10 [weekday] : Sun [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-11 [weekday] : Mon [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-12 [weekday] : Tue [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-13 [weekday] : Wed [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-14 [weekday] : Thu [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-15 [weekday] : Fri [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-16 [weekday] : Sat [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-17 [weekday] : Sun [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-18 [weekday] : Mon [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-19 [weekday] : Tue [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-20 [weekday] : Wed [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-21 [weekday] : Thu [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-22 [weekday] : Fri [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-23 [weekday] : Sat [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-24 [weekday] : Sun [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-25 [weekday] : Mon [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-26 [weekday] : Tue [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-27 [weekday] : Wed [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-28 [weekday] : Thu [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-29 [weekday] : Fri [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-30 [weekday] : Sat [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [date] : 2019-03-31 [weekday] : Sun [holiday] : 
+[2019-09-17 10:27:43] calender::create_calender [formatdate] : 2019-04-01
+[2019-09-17 10:27:43] calender::create_calender [formatday] : 1
+[17-Sep-2019 10:27:43 Asia/Tokyo] PHP Notice:  Undefined variable: formatdate in C:\xampp\htdocs\schedule_sample\calender.php on line 128
+[17-Sep-2019 10:27:43 Asia/Tokyo] PHP Notice:  Undefined variable: formatday in C:\xampp\htdocs\schedule_sample\calender.php on line 129
+[2019-09-17 10:27:43] calender::create_calender [formatdate] : 2019-04-02
+[2019-09-17 10:27:43] calender::create_calender [formatday] : 2
+[17-Sep-2019 10:27:43 Asia/Tokyo] PHP Notice:  Undefined variable: formatdate in C:\xampp\htdocs\schedule_sample\calender.php on line 128
+[17-Sep-2019 10:27:43 Asia/Tokyo] PHP Notice:  Undefined variable: formatday in C:\xampp\htdocs\schedule_sample\calender.php on line 129
+[2019-09-17 10:27:43] calender::create_calender [formatdate] : 2019-04-03
+[2019-09-17 10:27:43] calender::create_calender [formatday] : 3
+[17-Sep-2019 10:27:43 Asia/Tokyo] PHP Notice:  Undefined variable: formatdate in C:\xampp\htdocs\schedule_sample\calender.php on line 128
+[17-Sep-2019 10:27:43 Asia/Tokyo] PHP Notice:  Undefined variable: formatday in C:\xampp\htdocs\schedule_sample\calender.php on line 129
+[2019-09-17 10:27:43] calender::create_calender [formatdate] : 2019-04-04
+[2019-09-17 10:27:43] calender::create_calender [formatday] : 4
+[17-Sep-2019 10:27:43 Asia/Tokyo] PHP Notice:  Undefined variable: formatdate in C:\xampp\htdocs\schedule_sample\calender.php on line 128
+[17-Sep-2019 10:27:43 Asia/Tokyo] PHP Notice:  Undefined variable: formatday in C:\xampp\htdocs\schedule_sample\calender.php on line 129
+[2019-09-17 10:27:43] calender::create_calender [formatdate] : 2019-04-05
+[2019-09-17 10:27:43] calender::create_calender [formatday] : 5
+[17-Sep-2019 10:27:43 Asia/Tokyo] PHP Notice:  Undefined variable: formatdate in C:\xampp\htdocs\schedule_sample\calender.php on line 128
+[17-Sep-2019 10:27:43 Asia/Tokyo] PHP Notice:  Undefined variable: formatday in C:\xampp\htdocs\schedule_sample\calender.php on line 129
+[2019-09-17 10:27:43] calender::create_calender [formatdate] : 2019-04-06
+[2019-09-17 10:27:43] calender::create_calender [formatday] : 6
+[17-Sep-2019 10:27:43 Asia/Tokyo] PHP Notice:  Undefined variable: formatdate in C:\xampp\htdocs\schedule_sample\calender.php on line 128
+[17-Sep-2019 10:27:43 Asia/Tokyo] PHP Notice:  Undefined variable: formatday in C:\xampp\htdocs\schedule_sample\calender.php on line 129
+[2019-09-17 10:27:43] controller:: [holiday] : 
+[2019-09-17 10:27:43] controller:: [color] : #f5d1db
+[2019-09-17 10:27:43] ======== end puroguramu ========
+[2019-09-17 10:27:50] ======== start puroguramu ========
+[2019-09-17 10:27:50] controller:: GET : 
+Array
+(
+    [date] => 2019-02-28
+)
+[2019-09-17 10:27:50] controller:: POST: 
+[2019-09-17 10:27:50] controller:: [select date] : 2019-02-28
+[2019-09-17 10:27:50] controller:: [year] : 2019 [month] : 02 [gengo] : 平成31年
+[2019-09-17 10:27:50] model::select_schedule() [date]:2019-02-28
+[2019-09-17 10:27:50] model::query() sql 
+SELECT sid,text,DATE_FORMAT(reg_date,'%H:%i') as time
+FROM userschedule
+WHERE reg_date LIKE '2019-02-28%'
+AND status = 0
+ORDER BY reg_date
+[2019-09-17 10:27:50] controller:: [schedule]
+[2019-09-17 10:27:50] model::select_schedule() [date]:2019-02
+[2019-09-17 10:27:50] model::query() sql 
+SELECT DATE_FORMAT(reg_date,'%Y-%m-%d') as sch
+FROM userschedule
+WHERE reg_date LIKE '2019-02%'
+AND status = 0
+GROUP BY DATE_FORMAT(reg_date,'%Y-%m-%d')
+[2019-09-17 10:27:50] controller:: [month_schedule]
+[2019-09-17 10:27:50] calender::create_calender [year] : 2019 [month] :02 [day] :28
+[2019-09-17 10:27:50] calender::create_calender [firstDate] : 2019-02-01
+[2019-09-17 10:27:50] calender::create_calender [firstWeek] : 5 [week] : 金
+[2019-09-17 10:27:50] calender::create_calender [lastDate] : 2019-02-28
+[2019-09-17 10:27:50] calender::create_calender [lastWeek] : 4 [week] : 木
+[2019-09-17 10:27:50] calender::create_calender [rd] : 2019-01-31
+[2019-09-17 10:27:50] calender::create_calender [ad] : 2019-03-01
+[2019-09-17 10:27:50] calender::create_calender [calender_count] : 28
+[2019-09-17 10:27:50] calender::create_calender [st] : -6 days
+[2019-09-17 10:27:50] calender::create_calender [backday] : 2019-01-27
+[2019-09-17 10:27:50] calender::create_calender [day] : 27
+[2019-09-17 10:27:50] calender::create_calender [backday] : 2019-01-28
+[2019-09-17 10:27:50] calender::create_calender [day] : 28
+[2019-09-17 10:27:50] calender::create_calender [backday] : 2019-01-29
+[2019-09-17 10:27:50] calender::create_calender [day] : 29
+[2019-09-17 10:27:50] calender::create_calender [backday] : 2019-01-30
+[2019-09-17 10:27:50] calender::create_calender [day] : 30
+[2019-09-17 10:27:50] calender::create_calender [backday] : 2019-01-31
+[2019-09-17 10:27:50] calender::create_calender [day] : 31
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-01 [weekday] : Fri [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-02 [weekday] : Sat [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-03 [weekday] : Sun [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-04 [weekday] : Mon [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-05 [weekday] : Tue [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-06 [weekday] : Wed [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-07 [weekday] : Thu [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-08 [weekday] : Fri [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-09 [weekday] : Sat [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-10 [weekday] : Sun [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-11 [weekday] : Mon [holiday] : 建国記念の日
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-12 [weekday] : Tue [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-13 [weekday] : Wed [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-14 [weekday] : Thu [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-15 [weekday] : Fri [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-16 [weekday] : Sat [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-17 [weekday] : Sun [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-18 [weekday] : Mon [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-19 [weekday] : Tue [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-20 [weekday] : Wed [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-21 [weekday] : Thu [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-22 [weekday] : Fri [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-23 [weekday] : Sat [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-24 [weekday] : Sun [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-25 [weekday] : Mon [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-26 [weekday] : Tue [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-27 [weekday] : Wed [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [date] : 2019-02-28 [weekday] : Thu [holiday] : 
+[2019-09-17 10:27:50] calender::create_calender [formatdate] : 2019-03-01
+[2019-09-17 10:27:50] calender::create_calender [formatday] : 1
+[17-Sep-2019 10:27:50 Asia/Tokyo] PHP Notice:  Undefined variable: formatdate in C:\xampp\htdocs\schedule_sample\calender.php on line 128
+[17-Sep-2019 10:27:50 Asia/Tokyo] PHP Notice:  Undefined variable: formatday in C:\xampp\htdocs\schedule_sample\calender.php on line 129
+[2019-09-17 10:27:50] calender::create_calender [formatdate] : 2019-03-02
+[2019-09-17 10:27:50] calender::create_calender [formatday] : 2
+[17-Sep-2019 10:27:50 Asia/Tokyo] PHP Notice:  Undefined variable: formatdate in C:\xampp\htdocs\schedule_sample\calender.php on line 128
+[17-Sep-2019 10:27:50 Asia/Tokyo] PHP Notice:  Undefined variable: formatday in C:\xampp\htdocs\schedule_sample\calender.php on line 129
+[2019-09-17 10:27:50] controller:: [holiday] : 
+[2019-09-17 10:27:50] controller:: [color] : #c3d825
+[2019-09-17 10:27:50] ======== end puroguramu ========
+[2019-09-17 10:28:05] ======== start puroguramu ========
+[2019-09-17 10:28:05] controller:: GET : 
+Array
+(
+    [date] => 2019-02-28
+)
+[2019-09-17 10:28:05] controller:: POST: 
+[2019-09-17 10:28:05] controller:: [select date] : 2019-02-28
+[2019-09-17 10:28:05] controller:: [year] : 2019 [month] : 02 [gengo] : 平成31年
+[2019-09-17 10:28:05] model::select_schedule() [date]:2019-02-28
+[2019-09-17 10:28:05] model::query() sql 
+SELECT sid,text,DATE_FORMAT(reg_date,'%H:%i') as time
+FROM userschedule
+WHERE reg_date LIKE '2019-02-28%'
+AND status = 0
+ORDER BY reg_date
+[2019-09-17 10:28:05] controller:: [schedule]
+[2019-09-17 10:28:05] model::select_schedule() [date]:2019-02
+[2019-09-17 10:28:05] model::query() sql 
+SELECT DATE_FORMAT(reg_date,'%Y-%m-%d') as sch
+FROM userschedule
+WHERE reg_date LIKE '2019-02%'
+AND status = 0
+GROUP BY DATE_FORMAT(reg_date,'%Y-%m-%d')
+[2019-09-17 10:28:05] controller:: [month_schedule]
+[2019-09-17 10:28:05] calender::create_calender [year] : 2019 [month] :02 [day] :28
+[2019-09-17 10:28:05] calender::create_calender [firstDate] : 2019-02-01
+[2019-09-17 10:28:05] calender::create_calender [firstWeek] : 5 [week] : 金
+[2019-09-17 10:28:05] calender::create_calender [lastDate] : 2019-02-28
+[2019-09-17 10:28:05] calender::create_calender [lastWeek] : 4 [week] : 木
+[2019-09-17 10:28:05] calender::create_calender [rd] : 2019-01-31
+[2019-09-17 10:28:05] calender::create_calender [ad] : 2019-03-01
+[2019-09-17 10:28:05] calender::create_calender [calender_count] : 28
+[2019-09-17 10:28:05] calender::create_calender [st] : -6 days
+[2019-09-17 10:28:05] calender::create_calender [backday] : 2019-01-27
+[2019-09-17 10:28:05] calender::create_calender [day] : 27
+[2019-09-17 10:28:05] calender::create_calender [backday] : 2019-01-28
+[2019-09-17 10:28:05] calender::create_calender [day] : 28
+[2019-09-17 10:28:05] calender::create_calender [backday] : 2019-01-29
+[2019-09-17 10:28:05] calender::create_calender [day] : 29
+[2019-09-17 10:28:05] calender::create_calender [backday] : 2019-01-30
+[2019-09-17 10:28:05] calender::create_calender [day] : 30
+[2019-09-17 10:28:05] calender::create_calender [backday] : 2019-01-31
+[2019-09-17 10:28:05] calender::create_calender [day] : 31
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-01 [weekday] : Fri [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-02 [weekday] : Sat [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-03 [weekday] : Sun [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-04 [weekday] : Mon [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-05 [weekday] : Tue [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-06 [weekday] : Wed [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-07 [weekday] : Thu [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-08 [weekday] : Fri [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-09 [weekday] : Sat [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-10 [weekday] : Sun [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-11 [weekday] : Mon [holiday] : 建国記念の日
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-12 [weekday] : Tue [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-13 [weekday] : Wed [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-14 [weekday] : Thu [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-15 [weekday] : Fri [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-16 [weekday] : Sat [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-17 [weekday] : Sun [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-18 [weekday] : Mon [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-19 [weekday] : Tue [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-20 [weekday] : Wed [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-21 [weekday] : Thu [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-22 [weekday] : Fri [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-23 [weekday] : Sat [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-24 [weekday] : Sun [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-25 [weekday] : Mon [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-26 [weekday] : Tue [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-27 [weekday] : Wed [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [date] : 2019-02-28 [weekday] : Thu [holiday] : 
+[2019-09-17 10:28:05] calender::create_calender [formatdate] : 2019-03-01
+[2019-09-17 10:28:05] calender::create_calender [formatday] : 1
+[2019-09-17 10:28:05] calender::create_calender [formatdate] : 2019-03-02
+[2019-09-17 10:28:05] calender::create_calender [formatday] : 2
+[2019-09-17 10:28:05] controller:: [holiday] : 
+[2019-09-17 10:28:05] controller:: [color] : #c3d825
+[2019-09-17 10:28:05] ======== end puroguramu ========
